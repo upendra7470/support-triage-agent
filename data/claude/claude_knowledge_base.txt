@@ -1,0 +1,1101 @@
+================================================================================
+CLAUDE (ANTHROPIC) SUPPORT KNOWLEDGE BASE
+================================================================================
+Last Updated: May 2026
+For use with RAG-based Multi-Domain Support Triage Agent
+
+================================================================================
+ARTICLE 1: CLAUDE API AUTHENTICATION AND SETUP
+================================================================================
+Category: API / Authentication
+Company: Claude (Anthropic)
+Difficulty: Intermediate
+Escalation Required: No (unless credentials are compromised)
+
+Content:
+GETTING STARTED WITH CLAUDE API:
+
+Claude API is Anthropic's official way to access Claude models via code.
+
+STEP 1: CREATE AN API KEY
+
+To generate an API key:
+1. Go to console.anthropic.com
+2. Log in with your Anthropic account (or create one)
+3. Navigate to "Settings" or "API Keys" section
+4. Click "Create API Key" or "New Key"
+5. Give your key a descriptive name (e.g., "Production App", "Testing")
+6. Copy the key immediately (it won't be shown again)
+7. Store it securely in your environment
+
+STEP 2: STORE YOUR API KEY SECURELY
+
+DO NOT hardcode your API key in your source code!
+
+Instead, store it as an environment variable:
+
+Linux/macOS:
+```
+export ANTHROPIC_API_KEY='your-api-key-here'
+```
+
+Windows (PowerShell):
+```
+$env:ANTHROPIC_API_KEY='your-api-key-here'
+```
+
+Or add to your .env file:
+```
+ANTHROPIC_API_KEY=your-api-key-here
+```
+
+Then load it in your application code (use dotenv libraries).
+
+STEP 3: VERIFY YOUR SETUP
+
+Test your API key with a simple request. Using Python:
+```python
+from anthropic import Anthropic
+
+client = Anthropic()
+message = client.messages.create(
+    model="claude-opus-4-7",
+    max_tokens=1024,
+    messages=[{"role": "user", "content": "Hello, Claude"}],
+)
+print(message.content[0].text)
+```
+
+If this works, your API key is configured correctly.
+
+AUTHENTICATION ERROR TROUBLESHOOTING:
+
+Error: "401 - authentication_error: Invalid API key"
+Causes:
+- Wrong API key
+- API key copied incorrectly (extra spaces, etc.)
+- API key has been revoked
+- API key expired (older keys may need rotation)
+
+Solutions:
+1. Verify you copied the entire API key with no extra spaces
+2. Check console.anthropic.com to confirm the key exists and is enabled
+3. Try creating a new API key
+4. Ensure the key is from the right organization (if using multiple)
+
+Error: "401 - authentication_error: Invalid bearer token"
+Causes:
+- Malformed Authorization header in request
+- Token is not a valid API key
+- Request format is incorrect
+
+Solutions:
+1. Verify headers are correct: `Authorization: Bearer YOUR_API_KEY`
+2. Ensure NO Bearer token is being sent (just the raw key)
+3. Check your request formatting matches API documentation
+4. If using a library, update to the latest version
+
+REVOKING OR ROTATING API KEYS:
+
+When to Rotate:
+- You suspect the key was compromised
+- As a security best practice (annually recommended)
+- When leaving a company or project
+
+How to Revoke:
+1. Go to console.anthropic.com → API Keys
+2. Find the key you want to revoke
+3. Click "Revoke" or "Delete"
+4. Confirm the action
+5. The key becomes inactive immediately
+
+Steps After Revoking:
+1. Update all applications using that key with a new one
+2. Any requests using old key will fail with 401 error
+3. Generate a new key if needed
+4. Deploy the update to all affected services
+
+MULTIPLE API KEYS:
+
+You can create multiple API keys for different purposes:
+- Production key (limited to production app)
+- Development key (for testing)
+- External partner keys (for specific integrations)
+- Legacy keys (being phased out)
+
+Best Practice:
+- Give each key a descriptive name
+- Document which key is used for what
+- Rotate keys regularly
+- Revoke keys you're no longer using
+
+================================================================================
+ARTICLE 2: CLAUDE API ERROR CODES AND RESPONSES
+================================================================================
+Category: API / Troubleshooting
+Company: Claude (Anthropic)
+Difficulty: Intermediate
+Escalation Required: Sometimes
+
+Content:
+UNDERSTANDING HTTP ERROR CODES:
+
+Every API response includes an HTTP status code indicating success or failure.
+
+2XX - SUCCESS:
+
+200 - OK
+- Request succeeded, response included in body
+
+201 - Created
+- Request succeeded and new resource created
+
+4XX - CLIENT ERROR (Your Request Issue):
+
+400 - Invalid Request Error
+Meaning: There's a problem with your request format or content
+Causes:
+- Missing required fields in the request
+- Invalid JSON formatting
+- Unsupported model name
+- max_tokens too high or too low
+- Invalid message format
+
+Solutions:
+1. Check JSON syntax is valid
+2. Verify all required fields are present
+3. Check model name is spelled correctly (e.g., "claude-opus-4-7")
+4. Verify max_tokens is within allowed range
+5. Check message structure matches API docs
+
+Example Fix:
+```python
+# WRONG - Invalid JSON
+{"model": "claude-opus-4-7" "max_tokens": 1024}  # Missing comma
+
+# CORRECT
+{"model": "claude-opus-4-7", "max_tokens": 1024}
+```
+
+401 - Authentication Error
+Meaning: Your API key is invalid or missing
+Causes:
+- Wrong API key
+- API key expired or revoked
+- API key not included in request
+- Authorization header malformed
+- Using wrong key for the service/org
+
+Solutions:
+1. Verify API key is correct and current
+2. Check Authorization header: `Authorization: Bearer YOUR_KEY`
+3. Generate a new API key if existing one seems compromised
+4. Verify you're using the right organization's key
+5. See Article: "Claude API Authentication"
+
+402 - Billing Error
+Meaning: There's a problem with your billing or payment information
+Causes:
+- Payment method failed or invalid
+- No credits/subscription
+- Account suspended due to non-payment
+- Billing address mismatch
+- Card declined by processor
+
+Solutions:
+1. Go to console.anthropic.com/settings/billing
+2. Update payment method with valid card
+3. Verify billing address matches card on file
+4. Ensure you have sufficient credits or active subscription
+5. Contact support if card is repeatedly declined
+6. See Article: "Claude API Billing and Credits"
+
+403 - Permission Error
+Meaning: Your API key doesn't have permission for this operation
+Causes:
+- Organization admin disabled a feature for your key
+- API key has limited scopes
+- Feature not available in your plan tier
+- You're trying to access a model your key doesn't have access to
+
+Solutions:
+1. Check console.anthropic.com for key permissions and scopes
+2. Verify your plan tier includes the model you're using
+3. Contact your organization admin to grant permissions if needed
+4. Try with a different API key if you have multiple
+5. Escalate to support if permissions seem incorrect
+
+404 - Not Found Error
+Meaning: The resource you're trying to access doesn't exist
+Causes:
+- Model doesn't exist (typo in model name)
+- File or resource was deleted
+- Wrong endpoint URL
+- Resource requires different API version
+
+Solutions:
+1. Check model name against current list (see latest models)
+2. Verify endpoint URL is correct
+3. Confirm the resource wasn't deleted
+4. Check API documentation for correct endpoint
+
+413 - Request Too Large
+Meaning: Your request exceeds maximum size limits
+Causes:
+- Context window is too large (exceeds model limits)
+- Request exceeds 32 MB total size
+- Including too many tokens
+- Large files attached
+
+Solutions:
+1. Reduce the size of your request
+2. Check total token count (see token counting documentation)
+3. Split large requests into smaller ones
+4. Remove unnecessary files or content
+5. Use compression if applicable
+
+429 - Rate Limit Error
+Meaning: You've exceeded your allowed rate/quota
+Causes:
+- Too many requests sent in short time window
+- Exceeded monthly token quota
+- Exceeded requests-per-minute limit
+- Plan tier limit exceeded
+
+Solutions:
+1. Wait before retrying (check Retry-After header)
+2. Reduce request frequency
+3. Upgrade your plan for higher limits
+4. Add prepaid credits
+5. Implement exponential backoff retry logic
+6. See Article: "Claude API Rate Limits and Quotas"
+
+5XX - SERVER ERROR (Anthropic's Issue):
+
+500 - API Error
+Meaning: Unexpected error on Anthropic's side
+Causes:
+- Server error in Anthropic infrastructure
+- Temporary service disruption
+- Internal system issue
+
+Solutions:
+1. Wait a few minutes and retry
+2. Check status.anthropic.com for ongoing incidents
+3. Implement exponential backoff retry logic
+4. Contact support if error persists
+
+504 - Timeout Error
+Meaning: Request took too long to process
+Causes:
+- Long-running request (more than 10 minutes)
+- Processing delay due to server load
+- Network timeout during transmission
+
+Solutions:
+1. For long requests, consider using Streaming API
+2. Use Message Batches API for non-time-sensitive bulk processing
+3. Implement timeouts in your code
+4. Retry with exponential backoff
+5. Set TCP keep-alive to prevent idle connection drops
+
+RETRY STRATEGY:
+
+For transient errors (429, 504, 5XX), implement exponential backoff:
+
+```python
+import time
+
+max_retries = 3
+retry_count = 0
+backoff_factor = 2
+
+while retry_count < max_retries:
+    try:
+        response = client.messages.create(...)
+        break  # Success
+    except (429, 500, 504) as e:  # Transient errors
+        retry_count += 1
+        wait_time = backoff_factor ** retry_count
+        print(f"Retrying in {wait_time} seconds...")
+        time.sleep(wait_time)
+    except Exception as e:  # Non-transient error
+        raise  # Don't retry
+```
+
+REQUEST ID FOR DEBUGGING:
+
+Every API response includes a request-id header:
+```python
+message = client.messages.create(...)
+print(f"Request ID: {message._request_id}")
+```
+
+Use this ID when contacting support about a specific request.
+
+================================================================================
+ARTICLE 3: CLAUDE API BILLING AND CREDITS
+================================================================================
+Category: Billing / API
+Company: Claude (Anthropic)
+Difficulty: Intermediate
+Escalation Required: Sometimes
+
+Content:
+UNDERSTANDING CLAUDE API BILLING:
+
+Claude API uses a credit-based billing system (separate from Claude.ai subscriptions).
+
+HOW BILLING WORKS:
+
+1. You purchase credits in your console.anthropic.com account
+2. Each API call consumes credits based on:
+   - Number of input tokens (prompt)
+   - Number of output tokens (response)
+   - Model used (different models have different costs)
+3. Credits are deducted in real-time
+4. When credits run out, API requests fail with 402 error
+
+PRICING MODEL:
+
+Pricing is per-token with different rates for:
+- Input tokens (cheaper)
+- Output tokens (more expensive)
+- Different model tiers
+
+Example (prices may change):
+- Claude Opus 4.7: Most capable, highest cost
+- Claude Sonnet 4.6: Balanced performance and cost
+- Claude Haiku 4.5: Fastest and cheapest
+
+Check console.anthropic.com/settings/pricing for current rates.
+
+PURCHASING CREDITS:
+
+Method 1: Manual Credit Purchase
+1. Go to console.anthropic.com/settings/billing
+2. Click "Add Credits" or "Top Up"
+3. Enter amount ($25, $50, $100+)
+4. Enter payment information
+5. Credits appear in account immediately
+
+Method 2: Auto-Reload
+1. Go to console.anthropic.com/settings/billing
+2. Enable "Auto-reload" toggle
+3. Set threshold (e.g., "reload when balance drops below $10")
+4. Set reload amount (e.g., "$100 per reload")
+5. Payment method will be charged automatically
+
+MONITORING YOUR USAGE:
+
+View Real-Time Usage:
+1. console.anthropic.com/settings/usage
+2. View current month's spending
+3. See per-model breakdown
+4. View historical usage by date
+
+Setting Budget Limits:
+1. Go to console.anthropic.com/settings/billing
+2. Set "Monthly Budget Cap" (optional)
+3. When limit is reached, API requests will fail
+4. Prevents unexpected high bills
+
+Estimating Costs:
+- Token calculator: Check console for token estimation tool
+- Prompt size: Larger prompts = more input tokens = higher cost
+- Model choice: Haiku < Sonnet < Opus (in cost)
+
+BILLING ERROR: "402 - BILLING ERROR"
+
+Error Message: "There's an issue with your billing or payment information"
+
+Causes:
+- No credits in account (balance = $0)
+- Payment method failed
+- Card declined or expired
+- Billing address mismatch
+- Account suspended for non-payment
+
+Solutions:
+
+If Balance is Empty:
+1. Go to console.anthropic.com/settings/billing
+2. Click "Add Credits"
+3. Purchase credits with valid payment method
+4. Retry your API request
+
+If Payment Method Declined:
+1. Check the card is not expired
+2. Verify billing address matches card issuer's records
+3. Try a different payment method
+4. Contact your bank if card is repeatedly declined
+5. See Article: "Troubleshooting Payment Issues"
+
+If Auto-Reload Failed:
+1. Check console.anthropic.com/settings/billing
+2. Update payment method
+3. Enable auto-reload again
+4. Resume API requests
+
+If Account is Suspended:
+- Contact support immediately
+- Provide explanation for missed payment
+- Update billing information
+- Escalation required to re-enable account
+
+SEPARATE: CLAUDE.AI SUBSCRIPTION VS API BILLING
+
+Important Distinction:
+- Claude.ai Subscription (Pro/Max): For web app use only
+- API Billing (Credits): For programmatic API access
+
+They are completely separate:
+- Pro/Max subscription does NOT cover API usage
+- API credits do NOT work with Claude.ai
+- Both require separate payment
+- You can have both or just one
+
+If You Use Both:
+1. Maintain both subscriptions if needed
+2. Monitor both console.anthropic.com (API) and claude.ai settings (subscription)
+3. Bill to separate payment methods if preferred
+
+INVOICE AND REPORTING:
+
+Accessing Invoices:
+1. console.anthropic.com/settings/billing/invoices
+2. Download PDF invoices
+3. View payment history
+4. Export usage reports (CSV)
+
+Tax Information:
+- VAT/GST may be added depending on location
+- Business vs Consumer accounts have different treatment
+- Update billing address/tax ID in settings
+
+================================================================================
+ARTICLE 4: CLAUDE API RATE LIMITS AND USAGE QUOTAS
+================================================================================
+Category: API / Rate Limits
+Company: Claude (Anthropic)
+Difficulty: Intermediate
+Escalation Required: Sometimes
+
+Content:
+UNDERSTANDING RATE LIMITS:
+
+Rate limits control how often and how much you can use the API.
+
+RATE LIMIT TIERS:
+
+Different tiers based on account status and usage:
+
+Free Tier:
+- Limited requests per minute
+- Lower token quota per month
+- For testing/development only
+- No guaranteed uptime
+
+Standard Tier (API Users):
+- Moderate requests per minute
+- Higher monthly token quota
+- Suitable for production applications
+
+Premium Tier:
+- Higher RPM (requests per minute)
+- Significantly higher token quota
+- Priority support
+- Requires higher spending
+
+Enterprise Tier:
+- Custom rate limits
+- Dedicated support
+- SLA guarantees
+- Custom pricing
+
+TYPES OF LIMITS:
+
+1. Requests Per Minute (RPM)
+   - How many API calls you can make per minute
+   - Exceeded: Get 429 error
+   - Resets after the minute passes
+
+2. Tokens Per Minute (TPM)
+   - Total tokens consumed per minute
+   - Counts both input and output tokens
+   - Exceeded: Get 429 error
+   - Resets after the minute passes
+
+3. Monthly Token Quota
+   - Total tokens allowed per month
+   - Separate from RPM limit
+   - Resets monthly (usually on billing cycle date)
+   - Exceeded: Get 402 or 429 error
+
+CHECKING YOUR LIMITS:
+
+View in Console:
+1. Go to console.anthropic.com/settings/limits
+2. See current rate limits for your account
+3. View tier type
+4. Understand what limits apply to you
+
+EXCEEDING RATE LIMITS:
+
+Error: "429 - rate_limit_error: Request rejected"
+
+What's Happening:
+- You've exceeded your RPM or TPM limit
+- The API rejected your request
+- Your request will not be processed
+- Credits were NOT consumed
+
+Solutions:
+
+Immediate (Short-term):
+1. Wait before retrying (time varies based on limit)
+2. Implement exponential backoff retry logic
+3. Check Retry-After header for how long to wait
+
+Short-term (Within minutes):
+1. Reduce request frequency
+2. Reduce tokens per request
+3. Batch requests across longer time windows
+4. Don't send concurrent requests
+5. Implement request queuing
+
+Medium-term (Within days):
+1. Upgrade to higher tier
+2. Optimize your code to use fewer tokens
+3. Use cheaper models (Haiku vs Opus)
+4. Implement caching for common requests
+5. Use batch processing for non-urgent tasks
+
+Long-term (Plan-level changes):
+1. Upgrade account tier if rate limits are too restrictive
+2. Upgrade subscription plan
+3. Request custom limits (contact sales)
+
+EXAMPLE: Implementing Backoff Logic
+
+```python
+import time
+import random
+
+max_retries = 5
+
+def make_request_with_backoff(client, **kwargs):
+    for attempt in range(max_retries):
+        try:
+            return client.messages.create(**kwargs)
+        except Exception as e:
+            if "rate_limit" in str(e) and attempt < max_retries - 1:
+                wait_time = (2 ** attempt) + random.uniform(0, 1)
+                print(f"Rate limited. Waiting {wait_time:.2f}s before retry...")
+                time.sleep(wait_time)
+            else:
+                raise
+```
+
+OPTIMIZING TO AVOID LIMITS:
+
+Reduce Token Usage:
+1. Use more concise prompts
+2. Remove unnecessary context
+3. Use shorter max_tokens values
+4. Reuse prompts where possible
+5. Summarize long context before passing to API
+
+Use Batching for Non-Urgent Work:
+```python
+# Instead of immediate requests
+# Use Message Batches API for up to 50% cost savings
+# and bypasses rate limits
+```
+
+Use Streaming for Long Responses:
+```python
+# Streaming doesn't help with rate limits
+# But reduces perceived latency
+with client.messages.stream(...) as stream:
+    for text in stream.text_stream:
+        print(text, end="", flush=True)
+```
+
+Choose Right Model for Task:
+- Haiku 4.5: Fast, cheap (use for simple tasks)
+- Sonnet 4.6: Balanced (use for most tasks)
+- Opus 4.7: Most capable but expensive (use only when needed)
+
+Caching Strategy:
+```python
+# Cache results of expensive requests
+from functools import lru_cache
+
+@lru_cache(maxsize=100)
+def get_analysis(text):
+    return client.messages.create(
+        model="claude-sonnet-4-20250514",
+        max_tokens=1000,
+        messages=[{"role": "user", "content": text}]
+    )
+```
+
+REQUEST TRACKING:
+
+Each response includes a request-id:
+```python
+response = client.messages.create(...)
+print(f"Request ID: {response._request_id}")
+```
+
+Save request IDs to track your usage and for support debugging.
+
+================================================================================
+ARTICLE 5: CLAUDE API COMMON ISSUES AND SOLUTIONS
+================================================================================
+Category: Troubleshooting / API
+Company: Claude (Anthropic)
+Difficulty: Intermediate
+Escalation Required: Sometimes
+
+Content:
+TIMEOUT ERRORS:
+
+Error: "504 - timeout_error"
+Meaning: Request took longer than allowed time to process
+
+Causes:
+- Very long context window (100K+ tokens)
+- Complex reasoning task taking too long
+- Network latency
+- Server overload
+- Long-running operation (>10 minutes)
+
+Solutions:
+
+For Long Requests:
+1. Use Streaming API - returns tokens as they're generated
+2. Use Message Batches API - for non-time-sensitive work
+3. Split request into smaller chunks
+4. Reduce max_tokens value
+5. Use a simpler model (Haiku)
+
+Example: Streaming for Long Output
+```python
+with client.messages.stream(
+    model="claude-opus-4-7",
+    max_tokens=4096,
+    messages=[{"role": "user", "content": "Write a long essay..."}],
+) as stream:
+    for text in stream.text_stream:
+        print(text, end="", flush=True)
+```
+
+For Network Issues:
+1. Implement TCP keep-alive (SDKs do this automatically)
+2. Retry with exponential backoff
+3. Try from a different network
+4. Check your internet stability
+
+NETWORK CONNECTIVITY:
+
+Error: "Connection timeout" or "Connection refused"
+Causes:
+- API endpoint unreachable
+- Firewall blocking requests
+- DNS resolution issues
+- Network infrastructure problem
+
+Solutions:
+1. Check status.anthropic.com for incidents
+2. Verify you can reach api.anthropic.com (ping or curl)
+3. Check firewall rules aren't blocking api.anthropic.com
+4. Verify DNS resolution: `nslookup api.anthropic.com`
+5. Try from different network (home WiFi vs corporate)
+6. Check if VPN or proxy is interfering
+
+Test Connectivity:
+```bash
+# Test endpoint is reachable
+curl -I https://api.anthropic.com
+
+# Check DNS
+nslookup api.anthropic.com
+
+# Test with your API key
+curl -X POST https://api.anthropic.com/v1/messages \
+  -H "x-api-key: YOUR_KEY" \
+  -H "Content-Type: application/json" \
+  -d '{"model": "claude-opus-4-7", "max_tokens": 10, "messages": [{"role": "user", "content": "Hi"}]}'
+```
+
+EMPTY RESPONSES:
+
+Issue: API returns stop_reason="end_turn" with empty response
+
+Causes:
+- Claude determined turn should end
+- Very low max_tokens value
+- Model thinks it completed the task
+- System message too restrictive
+
+Solutions:
+1. Check if response actually contains text (sometimes wrapped in content blocks)
+2. Use continuation prompt if response was intentionally cut off
+3. Increase max_tokens value
+4. Review system message constraints
+5. Check if previous message included assistant tool results (Claude may wait for user input)
+
+HANDLING STOP REASONS:
+
+Possible stop_reason values:
+- "end_turn" - Claude finished naturally
+- "max_tokens" - Response was cut off at token limit
+- "tool_use" - Claude is calling a tool/function
+
+Example Handling:
+```python
+response = client.messages.create(...)
+
+if response.stop_reason == "max_tokens":
+    print("Response was truncated. Increase max_tokens or send continuation.")
+elif response.stop_reason == "end_turn":
+    print("Response completed normally.")
+    print(response.content[0].text)
+```
+
+If Response Cut Off:
+```python
+# Send continuation prompt
+next_response = client.messages.create(
+    model="claude-opus-4-7",
+    max_tokens=2000,
+    messages=[
+        {"role": "user", "content": "Original prompt"},
+        {"role": "assistant", "content": original_response.content[0].text},
+        {"role": "user", "content": "Continue from where you left off."}
+    ]
+)
+```
+
+SLOW RESPONSES:
+
+Issue: API calls are very slow
+
+Causes:
+- High token count slowing processing
+- Server load
+- Network latency
+- Complex reasoning task
+- Wrong model choice (using Opus when Haiku would suffice)
+
+Solutions:
+1. Try from different network/location
+2. Use streaming to get first tokens faster
+3. Reduce request complexity
+4. Use cheaper model (Haiku vs Opus)
+5. Check status.anthropic.com for incidents
+6. Implement caching for repeated requests
+
+INVALID JSON RESPONSES:
+
+Issue: Response appears to not be valid JSON (when expecting JSON)
+
+Causes:
+- API returned text response instead of JSON
+- Prompt didn't clearly request JSON
+- Model failed to produce valid JSON
+- Response was truncated mid-JSON
+
+Solutions:
+1. Use more explicit prompts: "Respond ONLY with valid JSON, no markdown"
+2. Use Structured Output (if available) instead of relying on model
+3. Add examples of correct format in system message
+4. Increase max_tokens to prevent truncation
+5. Check response.stop_reason for truncation
+
+REQUEST FAILURES WITH ERROR CODE NOT IN LIST:
+
+If you encounter an HTTP code not listed here:
+1. Check the response body for error details
+2. Check API documentation for latest updates
+3. Include full error message in support request
+4. Provide your request-id (from response header)
+5. Contact support if error is unexpected
+
+================================================================================
+ARTICLE 6: CLAUDE CODE SETUP AND AUTHENTICATION
+================================================================================
+Category: Claude Code / Setup
+Company: Claude (Anthropic)
+Difficulty: Beginner to Intermediate
+Escalation Required: Sometimes
+
+Content:
+WHAT IS CLAUDE CODE:
+
+Claude Code is a command-line tool and IDE extension that lets you use Claude for coding tasks directly from your terminal or VS Code.
+
+Available On:
+- Terminal/CLI (macOS, Linux, Windows)
+- VS Code Extension
+- Claude Desktop App
+
+INSTALLATION:
+
+Installation Via Script (Recommended):
+```bash
+curl -fsSL https://claude.ai/install.sh | bash
+```
+
+Or with npm (if you have Node.js):
+```bash
+npm install -g claude-code
+```
+
+After Installation:
+```bash
+# Verify installation
+claude --version
+
+# Start using Claude Code
+claude
+```
+
+AUTHENTICATION OPTIONS:
+
+Claude Code supports three authentication methods:
+
+Option 1: Claude.ai Account (Subscription-based)
+- Use your claude.ai login
+- Requires Claude Pro, Max, Team, or Enterprise subscription
+- Uses your subscription credits
+- Recommended for subscribers
+
+Option 2: Anthropic API Key (Pay-as-you-go)
+- Generate key from console.anthropic.com
+- Pay per token used
+- Good for developers and production systems
+- Best for automated/non-interactive use
+
+Option 3: Cloud Provider Credentials (Bedrock, Vertex AI)
+- Use AWS Bedrock or Google Vertex AI
+- Requires cloud account setup
+- Uses cloud provider billing
+
+SETTING UP WITH CLAUDE.AI ACCOUNT:
+
+1. Install Claude Code (see Installation section)
+2. Run: `claude login`
+3. Select "Sign in with Anthropic account"
+4. Browser opens to claude.ai login
+5. Log in to your account
+6. Authorize Claude Code
+7. Return to terminal
+8. Verify: `claude` (should show your account)
+
+SETTING UP WITH API KEY:
+
+1. Get API key from console.anthropic.com
+2. Set environment variable:
+   ```bash
+   export ANTHROPIC_API_KEY='sk-ant-...'
+   ```
+3. Run: `claude login`
+4. Select API key option if prompted
+5. Verify: `claude` (should show account type)
+
+IMPORTANT: Mixing Authentication
+
+Issue: You have BOTH Claude.ai subscription AND API key set
+Result: Claude Code may use API key and bill you per-token instead of using your subscription
+
+Solution:
+1. Choose ONE authentication method
+2. Don't set ANTHROPIC_API_KEY environment variable if using Claude.ai
+3. If you have both set, Claude Code may prefer API key
+4. Verify which auth is active: `claude /status`
+
+CHECK YOUR AUTHENTICATION:
+
+```bash
+# Show current login status
+claude /status
+
+# Clear login if something is wrong
+claude /logout
+
+# Log back in with correct method
+claude /login
+```
+
+TROUBLESHOOTING LOGIN:
+
+Error: "OAuth token revoked"
+Solution: Run `claude /login` again to get fresh credentials
+
+Error: "OAuth token has expired"
+Solution: Run `claude /login` (don't need /logout first for expiry)
+
+Error: "API Error: 401 authentication_error"
+Causes:
+- Invalid API key
+- API key revoked
+- Wrong key format
+- Mixed authentication methods
+
+Solutions:
+1. Verify API key is correct: `echo $ANTHROPIC_API_KEY`
+2. Check key exists in console.anthropic.com
+3. If using API key, unset: `unset ANTHROPIC_API_KEY`
+4. Run `claude /logout` then `claude /login`
+5. Verify no duplicate environment variables
+
+Stuck in Login Loop:
+1. Run `claude /logout`
+2. Wait 10 seconds
+3. Run `claude /login`
+4. If still stuck, check system clock (must be correct for OAuth)
+5. On macOS, check Keychain (may need to clear)
+
+MONITORING YOUR USAGE:
+
+If Using Subscription (Claude.ai):
+- Usage counts against your plan limits
+- View usage at claude.ai settings
+- Check remaining quota: `claude /status`
+
+If Using API Key:
+- View usage at console.anthropic.com/settings/usage
+- Credits deducted in real-time
+- Set budget limits to prevent overspending
+
+================================================================================
+ARTICLE 7: WHEN TO ESCALATE CLAUDE SUPPORT
+================================================================================
+Category: Support / Escalation
+Company: Claude (Anthropic)
+Difficulty: Beginner
+Escalation Required: Yes (for actual support)
+
+Content:
+SELF-HELP FIRST:
+
+Before contacting support, try:
+1. Check status.anthropic.com for any ongoing incidents
+2. Review error codes in Article: "Claude API Error Codes"
+3. Try restarting your application or terminal
+4. Check your internet connection
+5. Review API documentation at platform.claude.com/docs
+6. Search GitHub issues if using Claude Code
+7. Check your API key configuration
+8. Try a simple test request to verify basic functionality
+
+WHEN TO CONTACT ANTHROPIC SUPPORT:
+
+Email: support@anthropic.com
+
+Include in Your Request:
+- Your account email
+- Exact error message (copy-paste)
+- Error code if applicable
+- Request ID from failed request
+- Steps you've already taken
+- Expected vs actual behavior
+- Screenshots if helpful
+- Exact timestamp of the issue
+
+Issues to Escalate:
+
+Authentication Issues:
+- Cannot log in despite correct credentials
+- Account appears locked or suspended
+- OAuth authentication fails repeatedly
+- Credentials compromised (security issue)
+
+Billing Issues:
+- Unexpected charges or refunds not received
+- Card declined repeatedly
+- Cannot update billing information
+- Discrepancy in usage charges
+
+Technical Issues:
+- API consistently returning unexpected errors
+- Service completely unavailable
+- Data integrity concerns
+- Performance severely degraded
+
+Security Issues:
+- API key compromised or leaked
+- Suspicious account activity
+- Possible fraud or unauthorized access
+- Data breach concerns
+
+Feature Requests or Account Issues:
+- Need to increase rate limits
+- Request plan upgrades
+- Custom integration requirements
+- Enterprise/Team setup issues
+
+Reporting Issues Effectively:
+
+What Not to Include:
+- Your actual API key (never share!)
+- Passwords or sensitive credentials
+- Large code samples (summarize instead)
+- Proprietary business logic
+
+What To Include:
+- Reproduction steps (how to repeat the issue)
+- Minimal code example showing the problem
+- Environment info (OS, Python version, SDK version)
+- Request ID from response headers
+- Relevant logs (with sensitive data redacted)
+
+RESPONSE TIMES:
+
+Critical Issues:
+- API down, complete outage: 1-2 hours
+- Security issue: 2-4 hours
+
+High Priority:
+- Cannot access account: 4-8 hours
+- Billing fraud: 24 hours
+
+Standard:
+- API errors, technical issues: 24-48 hours
+- General questions: 2-5 business days
+
+ESCALATION DECISION TREE:
+
+1. Is the API completely down?
+   → Check status.anthropic.com
+   → If yes, wait and retry (don't contact support)
+
+2. Is it an authentication issue?
+   → Review Article: "Claude API Authentication"
+   → Try rotating your API key
+   → If still broken, escalate
+
+3. Is it a billing issue?
+   → Check console.anthropic.com/settings/billing
+   → Update payment method
+   → If issue persists, escalate
+
+4. Is it an error in your code?
+   → Check your request format
+   → Verify error codes in troubleshooting guide
+   → Try a simple test request
+   → If you still can't resolve, escalate
+
+5. Is it a security concern?
+   → Escalate immediately
+   → Mark as security/urgent
+   → Provide request ID
+
+If After These Steps the Issue Persists → ESCALATE
+
+================================================================================
+END OF CLAUDE/ANTHROPIC KNOWLEDGE BASE
+================================================================================

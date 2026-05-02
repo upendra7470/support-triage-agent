@@ -1,0 +1,646 @@
+================================================================================
+HACKERRANK SUPPORT KNOWLEDGE BASE
+================================================================================
+Last Updated: May 2026
+For use with RAG-based Multi-Domain Support Triage Agent
+
+================================================================================
+ARTICLE 1: HOW TO LOG IN TO YOUR HACKERRANK ACCOUNT
+================================================================================
+Category: Account Access / Login
+Company: HackerRank
+Difficulty: Beginner
+Escalation Required: No
+
+Content:
+To access your HackerRank account, follow these steps:
+
+1. Visit the HackerRank login page at https://www.hackerrank.com/login.html
+2. Enter your email address or username associated with your account
+3. Enter your password
+4. Click "Log In"
+
+You will be directed to your personal dashboard after successful login.
+
+If you're having trouble finding the login page:
+- Visit www.hackerrank.com
+- Click the "Log In" button in the top-right corner
+- You will be taken to the login page
+
+Note: HackerRank has separate login portals for different products:
+- HackerRank Community (for coding challenges and practice)
+- HackerRank for Work (for hiring and recruitment)
+- Make sure you're using the correct portal for your account type
+
+If your login is not working, see related articles:
+- "Update or Reset Password"
+- "Account Access Troubleshooting"
+
+================================================================================
+ARTICLE 2: UPDATE OR RESET PASSWORD
+================================================================================
+Category: Account Access / Security
+Company: HackerRank
+Difficulty: Beginner
+Escalation Required: No
+
+Content:
+CHANGING YOUR PASSWORD (If You Know Your Current Password):
+
+1. Log in to HackerRank using your credentials
+2. Click your profile icon in the upper-right corner
+3. Select "Settings" from the dropdown menu
+4. Locate the "Change Password" section
+5. Enter your current password
+6. Enter your new password
+7. Retype your new password to confirm
+8. Click "Save"
+
+Password Requirements:
+- Minimum 6 characters long
+- Use a combination of letters, numbers, and special characters for added security
+- Passwords are case-sensitive
+
+RESETTING YOUR PASSWORD (If You Forgot It):
+
+If you cannot remember your current password:
+
+1. Go to the HackerRank login page (https://www.hackerrank.com/login.html)
+2. Click "Forgot Password?" link below the password field
+3. Enter the email address associated with your account
+4. Select the verification checkbox (if applicable)
+5. Click "Send Reset Link" or "Next" depending on your portal
+6. Check your email inbox for a password reset link from HackerRank
+7. Click the link in the email
+8. Follow the instructions to create a new password
+9. Log in with your new password
+
+Important Notes:
+- Password reset links expire after a certain period (typically 24 hours)
+- If you don't see the email, check your spam/junk folder
+- Make sure you're using the email address associated with your account
+- If you have multiple accounts, you may be resetting the wrong one
+
+TROUBLESHOOTING PASSWORD ISSUES:
+
+Common Problem: "Invalid Email or Username"
+Solution: Double-check that you've entered the correct email address associated with your account. Try using your email instead of username or vice versa.
+
+Common Problem: "Password Reset Link Expired"
+Solution: Click "Forgot Password?" again and request a new reset link.
+
+Common Problem: "I Don't Receive the Reset Email"
+Solution:
+1. Check your spam/junk folder
+2. Verify the email is correct
+3. Wait a few minutes and try again
+4. Contact HackerRank support if the issue persists
+
+SECURITY BEST PRACTICES:
+
+- Change your password regularly (at least every 90 days)
+- Use unique passwords for HackerRank and other accounts
+- Never share your password with anyone
+- Be cautious of phishing emails asking for password resets
+
+If you continue to have password reset issues, this may require escalation to HackerRank support for account verification purposes.
+
+================================================================================
+ARTICLE 3: ACCOUNT SETTINGS AND PROFILE MANAGEMENT
+================================================================================
+Category: Account Settings
+Company: HackerRank
+Difficulty: Intermediate
+Escalation Required: No (unless account is compromised)
+
+Content:
+ACCESSING YOUR ACCOUNT SETTINGS:
+
+1. Log in to your HackerRank account
+2. Click your profile icon in the upper-right corner
+3. Select "Settings" from the dropdown menu
+4. You will see options for various account settings
+
+SECTIONS AVAILABLE IN ACCOUNT SETTINGS:
+
+General Profile Information:
+- Edit your name, bio, and profile picture
+- Update your email address
+- Change your preferred language
+
+Password Management:
+- Change your password (see Article: "Update or Reset Password")
+- View your password history (on some accounts)
+
+Account Preferences:
+- Email notification settings
+- Privacy settings (profile visibility, search indexing)
+- Language and timezone preferences
+
+Social Connections:
+- Connect or disconnect from Google, Facebook, GitHub
+- View connected social accounts
+- Manage third-party access
+
+Two-Factor Authentication (2FA):
+- Enable/disable 2FA for added security
+- Set up backup codes in case you lose access to your authenticator
+- Recommended for all users with sensitive data
+
+Account Type and Tier:
+- View your current subscription level (Free, Pro, etc.)
+- View expiration date if applicable
+- Manage billing information for paid accounts
+
+SECURITY RECOMMENDATIONS:
+
+1. Regularly review your connected applications
+2. Remove social connections you no longer use
+3. Enable Two-Factor Authentication if available
+4. Keep your email address up to date
+5. Review login activity and active sessions
+6. Update privacy settings according to your preferences
+
+SPECIAL NOTE FOR COMMUNITY VS FOR WORK:
+
+If you have both HackerRank Community and HackerRank for Work accounts:
+- These are separate accounts managed independently
+- Settings in one account do not affect the other
+- Password reset must be done separately for each
+- You may need to link them if your organization requires it
+
+If you cannot find a specific setting, it may be because:
+- You don't have the permission level required for that feature
+- The setting is organization-specific (for Work accounts)
+- Your account type doesn't include that feature
+
+================================================================================
+ARTICLE 4: BILLING, SUBSCRIPTIONS, AND PAYMENT ISSUES
+================================================================================
+Category: Billing / Subscriptions
+Company: HackerRank
+Difficulty: Intermediate
+Escalation Required: Sometimes (if payment issues persist)
+
+Content:
+UNDERSTANDING HACKERRANK SUBSCRIPTION TIERS:
+
+HackerRank offers multiple subscription options:
+
+Free Tier:
+- Access to basic coding challenges
+- Limited practice problems
+- Community features
+- No cost
+
+Pro/Premium Tier:
+- Unlimited access to all coding challenges
+- Advanced problem sets and contests
+- Interview preparation resources
+- Monthly or annual payment required
+
+For Work/Hiring Plans:
+- Custom technical assessments for hiring
+- Advanced recruiting features
+- Admin and team management
+- Contact sales for pricing
+
+VIEWING YOUR CURRENT SUBSCRIPTION:
+
+1. Log in to your HackerRank account
+2. Click your profile icon → Settings
+3. Look for "Subscription" or "Billing" section
+4. View your current tier, renewal date, and payment method
+
+UPGRADING YOUR SUBSCRIPTION:
+
+1. In your account settings, find the subscription section
+2. Click "Upgrade" or "Upgrade Now"
+3. Select your preferred plan (monthly or annual recommended for discount)
+4. Enter payment information
+5. Complete the purchase
+6. Your upgrade is effective immediately
+
+PAYMENT METHOD MANAGEMENT:
+
+1. Go to Settings → Billing or Subscription section
+2. Click "Update Payment Method" or "Manage Billing"
+3. Add or update your credit/debit card
+4. Remove old or expired payment methods
+5. Save your changes
+
+BILLING ISSUES AND TROUBLESHOOTING:
+
+Problem: "Payment Declined"
+Possible Causes:
+- Insufficient funds in your account
+- Card expired or blocked
+- Incorrect billing address or zip code
+- Card issuer declined the transaction for security reasons
+- 3D Secure authentication required
+
+Solutions:
+1. Verify your card details are correct
+2. Contact your bank to ensure the card is active
+3. Try a different payment method
+4. Wait 24 hours and retry if a temporary block occurred
+5. Ensure your billing address matches your bank's records
+6. If issue persists, contact HackerRank support with order details
+
+Problem: "Duplicate Charges or Unexpected Billings"
+Solutions:
+1. Check your email for confirmation receipts
+2. Review your billing history in account settings
+3. Verify the renewal date of your subscription
+4. If charged multiple times, contact HackerRank support immediately with:
+   - Transaction ID or Order number
+   - Dates of suspicious charges
+   - Screenshots of your billing statement
+
+Problem: "Subscription Not Active After Purchase"
+Solutions:
+1. Refresh your browser or log out and back in
+2. Allow 5-10 minutes for the system to process
+3. Check your email for confirmation
+4. Verify the payment method was successfully charged
+5. Contact support if still not activated after 24 hours
+
+REFUNDS AND CANCELLATION:
+
+HackerRank Refund Policy:
+- Refunds are typically issued within 7-30 days of cancellation
+- Early refunds may be available depending on your plan terms
+- Contact support for refund requests
+
+How to Cancel Your Subscription:
+1. Go to Settings → Subscription
+2. Click "Cancel Subscription" or "Manage Subscription"
+3. Confirm cancellation (you may be offered a retention discount)
+4. Your access continues until the end of your billing period
+5. After the billing period, your account reverts to free tier
+
+Important Note: Canceling does not delete your account data; it simply downgrades your access level.
+
+BILLING ESCALATION TRIGGERS:
+
+Contact HackerRank support if:
+- Multiple payment attempts have failed
+- You see unauthorized charges
+- You were double-charged
+- Your refund hasn't been processed after 30 days
+- You need a custom billing arrangement
+- You're experiencing recurring billing issues
+
+================================================================================
+ARTICLE 5: ACCOUNT SECURITY AND UNAUTHORIZED ACCESS
+================================================================================
+Category: Security / Account Compromise
+Company: HackerRank
+Difficulty: Intermediate
+Escalation Required: Yes (if account is compromised)
+
+Content:
+RECOGNIZING UNAUTHORIZED ACCOUNT ACCESS:
+
+Warning Signs:
+- You see login activity you don't recognize
+- Your password changed without your action
+- Your email address was changed
+- Unexpected progress or problem submissions in your account
+- You receive notifications for actions you didn't perform
+- Your profile information has been altered
+- You can't log in with your usual password
+
+IMMEDIATE ACTIONS IF YOUR ACCOUNT IS COMPROMISED:
+
+STEP 1: Secure Your Password
+1. If you can still log in, immediately change your password
+   - Go to Settings → Change Password
+   - Use a strong, unique password (uppercase, lowercase, numbers, special characters)
+2. If you cannot log in:
+   - Go to the forgot password page
+   - Reset your password using your email
+   - Make sure the email is correct
+
+STEP 2: Secure Your Email Address
+1. Log in to the email account associated with your HackerRank account
+2. Change that email account's password as well
+3. Review email forwarding rules and recovery options
+4. Check for suspicious account recovery attempts
+
+STEP 3: Enable Two-Factor Authentication (If Available)
+1. Go to Settings → Security or Two-Factor Authentication
+2. Follow the setup process
+3. Use an authenticator app (Google Authenticator, Authy, etc.)
+4. Save backup codes in a secure location
+
+STEP 4: Review Account Activity
+1. In Settings, look for "Login Activity" or "Active Sessions"
+2. Review all recent logins
+3. Log out suspicious sessions
+4. Note any unfamiliar devices or locations
+
+STEP 5: ESCALATE TO HACKERRANK SUPPORT
+Contact HackerRank support immediately and provide:
+- Your account email
+- When you first noticed the compromise
+- Description of what was changed or accessed
+- Any relevant screenshots
+- Your current location and typical login locations
+
+This requires human verification and escalation to support team.
+
+PREVENTING FUTURE COMPROMISE:
+
+Best Practices:
+1. Use strong, unique passwords for HackerRank and other accounts
+2. Enable Two-Factor Authentication on all important accounts
+3. Don't share your password with anyone (HackerRank staff will never ask)
+4. Be cautious of phishing emails claiming to be from HackerRank
+5. Keep your device secure with updated software and antivirus
+6. Use public WiFi carefully; consider a VPN
+7. Log out from shared computers
+8. Regularly review your account activity
+
+RECOGNIZING PHISHING ATTEMPTS:
+
+Be suspicious if:
+- You receive emails asking to "verify your account" or "confirm password"
+- Links in emails don't lead to official HackerRank domains
+- Sender email looks slightly off (e.g., hackerank.com instead of hackerrank.com)
+- You're asked for payment details via email
+- The email has poor grammar or formatting
+
+What to Do:
+- Do NOT click any links in suspicious emails
+- Do NOT provide your password or personal information
+- Forward the email to HackerRank support
+- Delete the email
+
+REPORTING SECURITY ISSUES:
+
+If you discover a security vulnerability or unauthorized account access:
+1. Do not attempt to "test" the vulnerability further
+2. Contact HackerRank support immediately
+3. Provide detailed information about the issue
+4. For critical security flaws, visit the security page on HackerRank.com
+
+================================================================================
+ARTICLE 6: COMMON HACKERRANK ERRORS AND TROUBLESHOOTING
+================================================================================
+Category: Technical Support / Troubleshooting
+Company: HackerRank
+Difficulty: Intermediate
+Escalation Required: Sometimes
+
+Content:
+COMMON ERROR MESSAGES AND SOLUTIONS:
+
+Error: "Sorry, we can't find your account"
+Context: Appears when trying to log in
+Causes:
+- Wrong email/username entered
+- Account doesn't exist with that email
+- Typo in email address
+- Mixing up HackerRank Community vs HackerRank for Work accounts
+
+Solutions:
+1. Double-check your email spelling
+2. Try using your username instead of email (or vice versa)
+3. Try the forgot password flow to verify the account exists
+4. If you have multiple accounts, try the other portal
+5. If still not found, escalate to support (may need to create new account)
+
+Error: "Invalid Credentials"
+Context: Appears after entering username/password
+Causes:
+- Incorrect password
+- Account doesn't exist
+- Login attempt from blocked IP or suspicious location
+
+Solutions:
+1. Verify caps lock is off
+2. Re-enter your credentials carefully
+3. Click "Forgot Password?" to reset your password
+4. Wait 5 minutes before retrying if you see this repeatedly
+5. Try from a different device or network if possible
+
+Error: "Execution Environment Error" or "Code Submission Failed"
+Context: When attempting to submit code solutions
+Causes:
+- Server-side issue with the coding environment
+- Network connectivity problem
+- Browser compatibility issue
+- Session timeout
+
+Solutions:
+1. Refresh the page and try again
+2. Clear your browser cache and cookies
+3. Try a different browser (Chrome, Firefox, Safari)
+4. Check your internet connection
+5. Wait a few minutes and retry if servers are experiencing issues
+6. Contact support if error persists
+
+Error: "Access Denied" or "Permission Denied"
+Context: When trying to access certain features or problems
+Causes:
+- You don't have a required subscription level
+- The problem is restricted to certain regions
+- Your account type doesn't have access
+- Content is temporarily unavailable
+
+Solutions:
+1. Verify your subscription level in Settings
+2. If free user, consider upgrading to Pro
+3. Check if the content is region-restricted
+4. Ensure you're logged into the correct account
+
+Error: "Session Expired"
+Context: After inactivity or when revisiting the site
+Causes:
+- Your login session timed out (usually after 2-4 hours of inactivity)
+- Cookie settings on your browser
+- Network interruption
+
+Solutions:
+1. Log in again
+2. Check browser cookie settings are enabled
+3. Make sure you're not in private/incognito mode (if possible)
+4. Try a different browser
+
+PLATFORM AVAILABILITY AND MAINTENANCE:
+
+HackerRank regularly performs maintenance. During maintenance windows:
+- Features may be temporarily unavailable
+- Code submissions may fail
+- Performance may be slow
+- Leaderboards may not update
+
+What to Do:
+- Check the HackerRank status page or announcements
+- Wait for maintenance to complete
+- Try again after the maintenance window
+- No action needed; you're not blocked
+
+BROWSER AND COMPATIBILITY ISSUES:
+
+Recommended Browsers:
+- Chrome (latest version)
+- Firefox (latest version)
+- Safari (latest version)
+- Edge (latest version)
+
+Troubleshooting Browser Issues:
+1. Update your browser to the latest version
+2. Disable browser extensions (especially ad blockers and script blockers)
+3. Clear browser cache and cookies
+4. Disable "Do Not Track" setting if enabled
+5. Try a different browser to test if it's browser-specific
+6. Ensure JavaScript is enabled
+
+NETWORK AND CONNECTIVITY:
+
+If experiencing slow performance or timeouts:
+1. Check your internet speed (speedtest.net)
+2. Close other bandwidth-heavy applications
+3. Restart your router/modem
+4. Move closer to your WiFi router
+5. Try a wired connection if possible
+6. Try at a different time (may be server congestion)
+
+================================================================================
+ARTICLE 7: HIRING FEATURES AND HACKERRANK FOR WORK
+================================================================================
+Category: For Work / Hiring
+Company: HackerRank
+Difficulty: Intermediate
+Escalation Required: Sometimes
+
+Content:
+HACKERRANK FOR WORK vs HACKERRANK COMMUNITY:
+
+HackerRank for Work is a separate platform designed for:
+- Companies to create custom technical assessments
+- Recruiting teams to evaluate candidates
+- Organizations to manage hiring workflows
+
+HackerRank Community is for:
+- Individual developers to practice coding
+- Users to participate in contests
+- Learning and skill development
+
+IMPORTANT: These are separate accounts. You may have both.
+
+IMPERSONATION DETECTION:
+
+HackerRank for Work includes sophisticated impersonation detection:
+- AI-based behavior analysis during coding assessments
+- Detection of suspicious patterns indicating someone else may be completing the assessment
+- Flagging of potential dishonest behavior for review
+
+If You're Taking an Assessment:
+- Complete the assessment yourself
+- Don't have someone else help
+- Avoid external tools for completing code unless explicitly allowed
+- Be aware that unusual patterns may be flagged for review
+
+If You're Running Assessments (Hiring):
+- You'll see detailed reports on candidate behavior
+- Impersonation flags appear in results
+- You can review video recording of assessment sessions (if enabled)
+- Use this data as one factor in evaluation
+
+SUBMITTING SUPPORT REQUESTS:
+
+To contact HackerRank support:
+1. Go to https://portal.usepylon.com/hackerrank-support/forms/customer-request-form
+2. Fill in the form with:
+   - Your company name
+   - Your name and email
+   - Problem category
+   - Detailed description of your issue
+   - Screenshots if applicable
+3. Submit the form
+4. You'll receive a response from support
+
+ESCALATION REQUIRED FOR:
+- Account access issues
+- Payment problems
+- Custom assessment help
+- Technical assessment failures
+- Reporting security issues
+- Custom hiring workflows
+
+================================================================================
+ARTICLE 8: WHEN TO CONTACT HACKERRANK SUPPORT
+================================================================================
+Category: Support / Escalation
+Company: HackerRank
+Difficulty: Beginner
+Escalation Required: Yes (for actual support request)
+
+Content:
+SELF-HELP OPTIONS (Try These First):
+
+Before contacting support, try:
+1. Check the HackerRank Knowledge Base at https://support.hackerrank.com/
+2. Search for your issue in the knowledge base
+3. Check your email for HackerRank notifications or status updates
+4. Review your browser console for error messages (press F12)
+5. Try logging out completely and logging back in
+6. Clear your browser cache and try again
+7. Try a different browser or device
+
+When you contact support, you'll need to provide:
+- Your account email
+- Detailed description of the issue
+- Steps you've already taken to resolve it
+- Error messages (exact text or screenshots)
+- Your device and browser information
+- When the issue started
+
+ISSUES THAT SHOULD BE ESCALATED:
+
+Account & Access:
+- Cannot log in despite resetting password
+- Account appears to be compromised or hacked
+- Email address associated with account was hacked
+- Cannot receive password reset emails
+- Account locked or suspended
+
+Billing Issues:
+- Unauthorized charges or duplicate billing
+- Payment declined repeatedly
+- Refund not received within 30 days
+- Need to modify subscription arrangement
+
+Technical Issues:
+- Widespread feature failures
+- Code submission consistently failing
+- Assessment platform completely down
+- Performance severely impacting usage
+
+Security Issues:
+- Suspected data breach
+- Unauthorized access to account
+- Phishing or scam attempts
+- API security concerns (for For Work)
+
+How to Submit a Support Request:
+1. Visit https://support.hackerrank.com/
+2. Click "Submit a Request" button
+3. Choose your category carefully
+4. Provide all relevant details
+5. Include any error messages or screenshots
+6. Submit the ticket
+7. You'll receive a ticket number and tracking information
+
+Support Response Time:
+- Urgent issues: 4-24 hours
+- Standard issues: 24-48 hours
+- General questions: 2-5 business days
+- Response time varies based on issue complexity
+
+================================================================================
+END OF HACKERRANK KNOWLEDGE BASE
+================================================================================

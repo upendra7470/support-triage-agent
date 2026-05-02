@@ -1,0 +1,1210 @@
+================================================================================
+VISA SUPPORT KNOWLEDGE BASE
+================================================================================
+Last Updated: May 2026
+For use with RAG-based Multi-Domain Support Triage Agent
+
+================================================================================
+ARTICLE 1: WHAT TO DO IF YOUR VISA CARD IS LOST OR STOLEN
+================================================================================
+Category: Card Management / Security
+Company: Visa
+Difficulty: Beginner
+Escalation Required: YES (immediate escalation required)
+
+Content:
+IMMEDIATE ACTION REQUIRED:
+
+If your Visa card is lost or stolen, act immediately. Every minute counts!
+
+STEP 1: CONTACT YOUR BANK/CARD ISSUER IMMEDIATELY
+
+This is the most important step:
+1. Find the phone number on another card, statement, or online banking
+2. Call the toll-free number on the back of your card (if you have it)
+3. Or contact your bank directly
+4. Tell them: "My card is lost/stolen and I need to block it immediately"
+
+Phone Numbers:
+- Check your statement for 24/7 support number
+- Most banks have dedicated lost/stolen card hotline
+- Have your account number ready
+
+What the Bank Will Do:
+- Block your card immediately to prevent unauthorized use
+- Cancel existing card
+- Discuss emergency replacement options
+- Review your recent transactions
+
+STEP 2: REPORT TO VISA
+
+While your bank handles the card, also notify Visa:
+
+Online at Visa.com:
+1. Visit the "Lost or Stolen Card" page on visa.com
+2. Fill out the online form
+3. Provide card details and information
+4. Submit the report
+
+By Phone:
+1. Call Visa's Consumer Services (number varies by country)
+2. For USA: 1-800-847-2911 (toll-free)
+3. For India: 000-800-100-1219
+4. Global numbers available on visa.co.in/support.html
+
+Important Information to Have Ready:
+- Full 16-digit card number (if you remember it)
+- Expiration date
+- Your name
+- Date you last used the card
+- Date you discovered it missing
+- Approximate location where it was lost
+
+STEP 3: REQUEST EMERGENCY REPLACEMENT CARD
+
+If You're Traveling:
+- Visa works with your bank to send emergency card
+- Usually arrives within 1-3 business days
+- Can be sent to your current location
+- May require advance payment for expedited shipping
+- Call +1-303-967-1096 if outside the USA (reverse charge calls accepted)
+
+Process:
+1. Contact your bank immediately
+2. Provide current address where you need card shipped
+3. Ask about emergency card options
+4. May need to provide emergency funds upfront
+5. Card will be mailed or available for local pickup
+
+STEP 4: MONITOR YOUR ACCOUNT
+
+After Reporting:
+1. Log into online banking daily to check for unauthorized charges
+2. Review your statements for next 60 days minimum
+3. Set up transaction alerts for unusual activity
+4. Visa's Zero Liability Policy protects you from unauthorized charges
+5. Report any suspicious transactions immediately
+
+PROTECT YOURSELF GOING FORWARD:
+
+To Prevent Future Loss:
+1. Keep card in secure location
+2. Don't write PIN on card
+3. Avoid carrying multiple cards
+4. Use RFID-blocking wallet
+5. Enable transaction alerts via mobile app
+6. Set spending limits if available
+
+ESCALATION TRIGGERS:
+
+Contact Support Immediately if:
+- Lost card already has unauthorized charges
+- Card was lost at a crime scene (robbery, mugging)
+- Card contains sensitive security features
+- You're having difficulty reaching your bank
+- You need emergency assistance while traveling
+
+Note: Visa does not process the card replacement directly - only your bank can. Visa provides the framework and expedited support services.
+
+================================================================================
+ARTICLE 2: CARD DECLINED - UNDERSTANDING WHY AND HOW TO FIX IT
+================================================================================
+Category: Card Issues / Troubleshooting
+Company: Visa
+Difficulty: Beginner
+Escalation Required: Sometimes
+
+Content:
+WHY WAS MY CARD DECLINED?
+
+Your card can be declined for many reasons. Understanding the cause is the first step to fixing it.
+
+COMMON REASONS FOR CARD DECLINES:
+
+1. EXPIRED CARD
+Cause: Your card has passed its expiration date
+Solution:
+- Check the expiration date on your card (front, usually MM/YY format)
+- If expired, contact your bank for replacement
+- Use new card number and expiration once you receive it
+
+2. INSUFFICIENT FUNDS
+Cause: Your account balance is below the transaction amount
+Solution:
+- Check your available balance
+- For credit cards: Check remaining credit limit
+- For debit cards: Verify funds in checking account
+- Wait for pending transactions to clear if needed
+- Try again if expecting a deposit
+
+3. INCORRECT PIN OR WRONG INFORMATION
+Cause: You entered wrong PIN at ATM/terminal
+Solution:
+- Verify correct PIN (3-4 digits usually)
+- Try again, being careful to enter correct numbers
+- If locked out after too many attempts, contact bank
+- Note: Most ATMs allow 3 attempts before blocking
+
+4. SPENDING/CREDIT LIMIT REACHED
+Cause: You've exceeded your daily or credit limit
+Solution:
+- Check your current available credit or balance
+- Wait for your next billing cycle or payment
+- Request credit limit increase from issuer
+- Contact bank: limits vary by account and time
+
+5. CARD FLAGGED BY BANK'S FRAUD DETECTION
+Cause: Unusual activity triggers bank's security system
+Reasons:
+- Transaction in different country
+- Unusually large purchase
+- Multiple rapid transactions
+- Transaction type unusual for your account
+- Geographic inconsistency (card used in two places too quickly)
+
+Solutions:
+- Contact your bank to "unlock" the card
+- Confirm the transaction was legitimate
+- Update bank if traveling internationally
+- Answer security questions if required
+- Wait 24-48 hours before trying again
+- Use card in person if possible (more secure than online)
+
+6. BILLING ADDRESS MISMATCH (Address Verification System)
+Cause: Zip code or address on file doesn't match what you entered
+Solution:
+- Double-check your billing address
+- Verify zip code matches exactly what bank has on file
+- For debit cards especially: address must match
+- Update address in online banking if changed
+
+7. INTERNATIONAL TRANSACTIONS BLOCKED
+Cause: Bank blocks transactions in foreign countries by default
+Solution:
+- Call your bank BEFORE traveling
+- Inform them of countries and dates
+- Ask them to enable international transactions
+- Some banks require 24-48 hours notice
+- SMS or call confirmation may be required for first international use
+
+8. 3D SECURE AUTHENTICATION FAILED
+Cause: Online security verification didn't complete
+What is 3D Secure?
+- Additional security layer for online purchases
+- Verifies you're legitimate card holder
+- Usually requires password or one-time code
+
+Solutions:
+- Complete the 3D Secure authentication when prompted
+- Check for SMS/email with verification code
+- Verify your email address is current with bank
+- Some phones may not receive SMS (check network)
+- Try again after 15 minutes
+- Contact bank if cannot complete verification
+
+9. CARD NOT ACTIVATED YET
+Cause: New card hasn't been activated
+Solution:
+- New cards often require activation
+- Look for instructions in card packaging
+- Call number on back of card to activate
+- Use online banking website to activate
+- Wait 24 hours after activation before using
+
+10. MERCHANT RESTRICTIONS
+Cause: Merchant won't accept your card type
+Why this happens:
+- Merchant's payment system doesn't support Visa
+- Merchant has minimum purchase amount
+- Merchant has maximum amount per transaction
+- International merchants may have restrictions
+- Certain industries (gambling, etc.) have restrictions
+
+Solutions:
+- Ask merchant if they accept Visa
+- Check if they have minimum/maximum
+- Try a different payment method
+- Contact merchant customer service
+- Report to Visa if merchant unfairly restricted
+
+TECHNICAL/TEMPORARY DECLINES:
+
+These are usually temporary and resolve on their own:
+
+1. NETWORK/CONNECTIVITY ISSUE
+- Merchant's terminal lost connection
+- Solution: Wait and retry in 5-10 minutes
+- Try a different merchant terminal if available
+
+2. SERVER ERROR
+- Payment processor having technical issues
+- Solution: Wait and try again later
+- Not your fault or card's fault
+
+3. VELOCITY LIMIT (Too Many Transactions Too Fast)
+- You made multiple transactions in short timeframe
+- System sees as potential fraud
+- Solution: Wait 24 hours before trying again
+
+WHAT TO DO WHEN YOUR CARD IS DECLINED:
+
+In Store:
+1. Don't panic - usually temporary
+2. Ask cashier to try again
+3. Try a different terminal if available
+4. Offer to provide additional ID for verification
+5. Call bank from store if needed
+6. Use backup payment method if available
+
+Online:
+1. Check entered information is correct
+2. Verify billing address and zip code
+3. Complete any 3D Secure authentication if prompted
+4. Try again in a few minutes
+5. Clear browser cookies and try again
+6. Try different browser if possible
+7. Use payment method directly instead of saved method
+8. Contact merchant support if error message appears
+
+At ATM:
+1. Most ATMs allow 3 attempts
+2. After 3 failures, card is blocked at that ATM for 24 hours
+3. Take card and leave (don't try repeatedly)
+4. Contact your bank to confirm card is working
+5. Try different ATM if needed
+
+WHEN TO CONTACT YOUR BANK:
+
+Contact Your Issuer (Bank) If:
+- Card is repeatedly declined for no clear reason
+- You see your available balance is incorrect
+- Fraud detection seems to be incorrectly triggering
+- Card is locked after too many attempts
+- You need credit limit increase
+- You're receiving error messages you don't understand
+
+What to Tell Them:
+1. When your card was declined (date and time)
+2. Where it was declined (merchant name, ATM location)
+3. Type of transaction (purchase, ATM withdrawal, online)
+4. Amount of transaction
+5. Error message you received (if any)
+6. Whether you've made recent international transactions
+
+Phone Numbers:
+- Typically on back of your card
+- Most banks: 24/7 customer service
+- Have your card number ready
+
+WHEN TO CONTACT VISA:
+
+Visa has limited ability to help directly. Work with your bank first.
+
+Contact Visa if:
+- Bank doesn't respond to your issue
+- You believe there's a Visa system problem
+- You're having issues with 3D Secure specifically
+- You want to report a merchant issue
+- You need emergency assistance while traveling
+
+Note: Visa does not manage your account - your bank does. Visa's role is to operate the payment network and resolve system-level issues.
+
+================================================================================
+ARTICLE 3: HOW TO DISPUTE A TRANSACTION (CHARGEBACK)
+================================================================================
+Category: Disputes / Fraud
+Company: Visa
+Difficulty: Intermediate
+Escalation Required: YES (for actual dispute filing)
+
+Content:
+UNDERSTANDING DISPUTES AND CHARGEBACKS:
+
+A dispute (or chargeback) is a formal claim with your bank that a transaction was unauthorized, fraudulent, or incorrect.
+
+WHEN CAN YOU DISPUTE A TRANSACTION?
+
+Valid Reasons for Dispute:
+
+1. UNAUTHORIZED TRANSACTION
+You didn't make this charge. Period.
+- Your card was stolen/lost and fraudulently used
+- Someone else had your card information
+- Someone hacked your account
+- Card number was compromised at merchant
+
+Timeline: Can dispute within 60-120 days
+
+2. FRAUDULENT TRANSACTION
+You made the transaction, but it was based on false information.
+Examples:
+- Merchant promised refund but won't provide
+- Product/service never delivered after payment
+- Received counterfeit goods instead of authentic
+- Service was completely different from advertised
+- Duplicate charge (charged twice for one purchase)
+
+Timeline: Usually 60-120 days from transaction
+
+3. MERCHANT ERROR
+Transaction was processed incorrectly.
+Examples:
+- Charged wrong amount (too much money taken)
+- Charged multiple times for single transaction
+- Card information entered incorrectly
+- Amount authorized doesn't match what you used
+
+Timeline: 30-120 days typically
+
+4. NO AUTHORIZATION
+Merchant processed transaction without your consent.
+Examples:
+- Recurring charge after you canceled subscription
+- Merchant didn't obtain proper authorization
+- Transaction processed after you declined it
+
+Timeline: Varies by specific situation
+
+5. NO DELIVERY
+You paid for goods/services that never arrived.
+Examples:
+- Package was supposed to arrive but didn't
+- Service wasn't provided despite payment
+- Partial delivery (didn't receive everything)
+
+Timeline: Usually 30-60 days after expected delivery
+
+WHEN YOU CANNOT DISPUTE (Visa Won't Allow):
+
+Disputes NOT Allowed:
+- You change your mind about purchase (buyer's remorse)
+- Merchandise quality is poor (but not counterfeit)
+- Airline seat selection wasn't what you wanted
+- You made transaction by mistake
+- Merchant delivered product but you're unhappy
+- You gave someone else your card permission to use it
+
+STEP-BY-STEP DISPUTE PROCESS:
+
+STEP 1: GATHER EVIDENCE FIRST (Before Contacting Bank)
+
+Essential Documents:
+- Order confirmation emails
+- Shipping/tracking information
+- Delivery proof (or lack thereof)
+- Communication with merchant (emails, chat logs)
+- Credit card statement showing transaction
+- Proof of payment refusal (if applicable)
+- Photos of damaged goods (if applicable)
+- Your attempts to contact merchant
+
+For Unauthorized Charges:
+- Bank statement showing charge
+- Proof you reported card lost/stolen
+- Confirmation card was blocked
+- Your location at time of transaction
+
+STEP 2: TRY TO RESOLVE WITH MERCHANT FIRST
+
+Before Disputing:
+1. Contact merchant customer service
+2. Clearly explain the problem
+3. Request refund in writing (email preferred)
+4. Allow 5-7 business days for response
+5. Escalate to manager/supervisor if needed
+6. Document all communication
+
+Why Try First?
+- Faster resolution if successful
+- Avoids chargeback fees
+- Preserves merchant relationship
+- Gives merchant chance to make right
+
+STEP 3: CONTACT YOUR BANK
+
+If merchant won't help:
+
+1. Call your bank (number on back of card)
+2. Say: "I want to dispute a transaction"
+3. Bank will open a dispute/chargeback case
+4. Provide transaction details:
+   - Merchant name
+   - Transaction date
+   - Amount
+   - Your transaction ID (if available)
+   - Reason for dispute
+
+5. Submit required documentation:
+   - Signed dispute form (bank will send)
+   - Copies of all evidence
+   - Written statement explaining issue
+   - Supporting documents
+
+STEP 4: BANK INVESTIGATES
+
+What Happens Next:
+1. Bank acknowledges receipt of dispute
+2. Bank assigns investigation timeframe (30-60 days typically)
+3. Bank requests information from merchant
+4. Merchant has time to respond with evidence
+5. Both sides present their case
+6. Bank makes determination
+
+During Investigation:
+- You can provide additional evidence
+- Bank may ask follow-up questions
+- Merchant may contact you directly
+- Process is confidential
+
+STEP 5: RESOLUTION
+
+Possible Outcomes:
+
+Case Approved (In Your Favor):
+- Chargeback issued
+- Funds returned to your account
+- Takes 5-7 days after approval
+- Merchant's account is debited
+- Merchant may be penalized
+
+Case Denied (Not In Your Favor):
+- Dispute rejected
+- Chargeback not issued
+- Funds not returned
+- You can appeal (request reconsideration)
+- Have 5-7 days to provide new evidence
+
+TIMELINE:
+
+Typical Dispute Process:
+- Initial report: Immediate
+- Provisional credit: 5-10 days (if applicable)
+- Investigation: 30-60 days
+- Final decision: 10 days after investigation ends
+- Chargeback posted: 5-7 days if approved
+
+Total: 45-90 days typically
+
+PROVISIONAL CREDIT:
+
+What Is It?
+- Temporary credit while bank investigates
+- Not final - can be reversed if case is lost
+- Gives you access to funds immediately
+- Appears as separate line on statement
+
+Will I Get Provisional Credit?
+- Usually yes for unauthorized fraud
+- Maybe for other dispute types
+- Not guaranteed
+- Depends on bank's policy
+
+AFTER WINNING A DISPUTE:
+
+If dispute approved:
+1. Funds returned to account (takes 5-7 days)
+2. Merchant receives chargeback notice
+3. Merchant may contact you (legally can)
+4. Merchant may dispute your dispute (second-level process)
+5. Merchant may refuse to do business with you
+
+After Dispute is Final:
+- Funds stay with you (unless merchant wins appeal)
+- Merchant bears cost of chargeback
+- Can proceed with legal action against merchant if needed
+
+SPECIAL CASES:
+
+RECURRING CHARGES (Subscription/Membership):
+
+If Merchant Won't Cancel:
+1. Contact merchant first to cancel
+2. Request written confirmation of cancellation
+3. Verify charge no longer appears on next billing cycle
+4. If still charges despite cancellation request, dispute
+
+Dispute Reason: "Subscription not cancelled as requested"
+
+Timeline: Dispute within 60 days of unauthorized recurring charge
+
+CHARGEBACKS vs REFUNDS:
+
+Refund:
+- Request directly from merchant
+- Funds returned within 3-5 business days
+- No investigation needed
+- Preferred method
+
+Chargeback:
+- Filed through your bank
+- Takes 45-90 days
+- Investigation required
+- Merchant may be penalized
+- Last resort after merchant refuses refund
+
+Try Refund First, Chargeback As Last Resort.
+
+DOCUMENTATION CHECKLIST:
+
+Before Submitting Dispute, Have:
+- [ ] Original transaction receipt
+- [ ] Bank statement showing charge
+- [ ] Order confirmation email
+- [ ] Email communications with merchant
+- [ ] Tracking/shipping information
+- [ ] Photos of goods (if applicable)
+- [ ] Proof of delivery issues
+- [ ] Written proof of merchant refusal
+- [ ] Request for refund in writing
+- [ ] Your statement of facts (1-2 pages)
+
+Complete documentation = stronger case = better outcome
+
+================================================================================
+ARTICLE 4: FRAUD PROTECTION AND UNAUTHORIZED TRANSACTIONS
+================================================================================
+Category: Security / Fraud
+Company: Visa
+Difficulty: Beginner
+Escalation Required: YES (if fraud detected)
+
+Content:
+UNDERSTANDING VISA FRAUD PROTECTION:
+
+Visa has multiple layers of protection to prevent fraud, and protects you if fraud occurs.
+
+VISA'S FRAUD DETECTION SYSTEMS:
+
+Advanced Authorization (AI-Powered):
+- Visa's AI analyzes every transaction in real-time
+- Checks 500+ data points per transaction
+- Learns your typical spending patterns
+- Identifies suspicious activity before charging
+- Helps prevent $25+ billion in fraud annually
+
+What It Checks:
+- Transaction amount (is it typical for you?)
+- Location (is it possible to be there?)
+- Merchant type (do you normally shop here?)
+- Time of day (unusual time for you?)
+- Device information
+- IP address
+- Velocity (too many transactions too fast?)
+- Biometrics (if available)
+
+How It Works:
+- Legitimate transactions usually approved instantly
+- Suspicious transactions may require verification
+- You might get text asking to confirm transaction
+- False declines minimized while catching fraud
+
+3D SECURE AUTHENTICATION:
+
+What Is It?
+- Additional security layer for online shopping
+- Verifies you're the legitimate card holder
+- Happens between you, issuer bank, and merchant
+- Protects both you and merchant from fraud
+
+How It Works:
+1. You enter card details at online merchant
+2. Merchant checks if 3D Secure is available
+3. You're redirected to your bank's authentication page
+4. You verify via password, PIN, or biometric
+5. Authentication confirmed back to merchant
+6. Transaction proceeds (if authentication successful)
+
+You Don't Need to Register:
+- 3D Secure is automatic
+- Your bank manages it
+- You just authenticate when prompted
+- No separate signup needed
+
+Note: Visa does not set up the authentication - your bank does.
+
+ZERO LIABILITY PROTECTION:
+
+What Is Visa's Zero Liability Policy?
+
+Visa Zero Liability means:
+- You're not responsible for unauthorized charges
+- Even if card/number was fraudulently used
+- Protection covers most Visa transactions
+- Applies to credit and debit cards
+
+Exceptions (Visa Doesn't Cover):
+- Certain commercial card transactions
+- Anonymous prepaid card transactions
+- Transactions made by someone you gave permission to
+- Gross negligence (you wrote PIN on card, for example)
+- Cases of fraud on your part
+
+What It Covers:
+- Lost card used without permission
+- Stolen card information
+- Online fraud with your card details
+- ATM fraud
+- Phone/mail order fraud
+- Counterfeit card use
+
+Important Requirement:
+You MUST report unauthorized transactions promptly:
+- Contact bank within 60 days
+- The sooner you report, the better
+- Visa's Zero Liability requires timely notification
+- Delaying reporting may void protection
+
+WHAT TO DO IF YOU SEE UNAUTHORIZED CHARGES:
+
+IMMEDIATE ACTIONS (Within Hours):
+
+1. Contact Your Bank Immediately
+   - Call 24/7 number on back of card
+   - Or log into online banking to report
+   - Tell them: "I see unauthorized charges"
+   - Provide transaction details
+
+2. Your Bank Will:
+   - Freeze/cancel card immediately
+   - Block merchant from further charges
+   - Reverse unauthorized charges (temporarily)
+   - May send replacement card
+   - May provide emergency cash
+
+3. Document Everything:
+   - Screenshot unauthorized charges
+   - Note exact amounts and dates
+   - Record merchant names
+   - Save all communications
+
+WITHIN 24-48 HOURS:
+
+4. File Formal Dispute
+   - Submit written dispute form
+   - Include documentation
+   - Provide your account number
+   - Explain why charges are unauthorized
+
+5. Change Any Compromised Passwords
+   - If online account was hacked
+   - Change bank password
+   - Change email password (if that was compromised)
+   - Change passwords for other accounts with same email
+
+6. Monitor Your Account
+   - Check daily for 60 days
+   - Set up transaction alerts
+   - Watch for new unauthorized charges
+   - Watch for identity theft signs
+
+FRAUD INVESTIGATION PROCESS:
+
+After You Report:
+1. Bank opens fraud investigation
+2. Investigates charges (15-30 days typically)
+3. Issues provisional credit (usually 5-10 days)
+4. Communicates with merchant's bank
+5. Merchant disputes (if they believe charges were legit)
+6. Further investigation if merchant disputes
+7. Final determination (45-60 days from reporting)
+
+Timeline:
+- Provisional credit: 5-10 days
+- Investigation: 30-60 days
+- Final decision: Additional 10-20 days if disputed
+
+During Investigation:
+- You have access to provisional credit
+- Can use funds while investigation proceeds
+- If investigation goes against you, funds can be reversed
+- Bank must be able to prove charges were authorized
+
+WHAT MAKES A TRANSACTION LOOK FRAUDULENT:
+
+Your Bank Might Decline or Flag:
+
+1. UNUSUAL LOCATION
+- Card used in different country
+- Card used in state you rarely visit
+- Geographic impossibility (two cities too far apart, too fast)
+
+2. UNUSUAL MERCHANT TYPE
+- Different type of purchase than you normally make
+- High-risk merchant (cash advance, gambling, etc.)
+- New merchant you've never used
+
+3. UNUSUAL AMOUNT
+- Amount much higher than your typical purchase
+- Multiple large purchases in short timeframe
+- Round numbers that seem suspicious
+
+4. UNUSUAL TIMING
+- Transaction at unusual hour (3 AM, for example)
+- Rapid succession of transactions
+- Pattern suggesting testing stolen card
+
+5. UNUSUAL DEVICE/LOCATION
+- Different device than normal
+- Different IP address
+- VPN detected
+- Transaction from country you're not in
+
+What Happens:
+- May decline automatically (security)
+- May call/text you to confirm
+- May require additional authentication
+- May temporarily block card
+- All to prevent fraud
+
+PROTECTING YOURSELF FROM FRAUD:
+
+Best Practices:
+
+Online Shopping:
+- Use strong, unique passwords for each site
+- Use credit card over debit (more fraud protection)
+- Don't save payment details on untrusted sites
+- Look for "https://" and lock icon
+- Verify site is legitimate (check URL carefully)
+- Don't shop on public WiFi without VPN
+- Ignore phishing emails asking for card details
+
+In Person:
+- Keep card in sight when making payment
+- Don't let server take card out of sight
+- Cover keypad when entering PIN
+- Keep receipts and compare to statements
+- Sign back of card
+- Don't write PIN on card or nearby
+
+Card Information:
+- Don't share full card number unless necessary
+- Don't use card number in emails
+- Don't text card information
+- Don't read number aloud in public
+- Be wary of requests for CVV (3 digits on back)
+
+Statements and Monitoring:
+- Review statements monthly
+- Check online banking regularly
+- Set up transaction alerts
+- Sign up for free credit monitoring
+- Consider credit freeze if high risk
+- Monitor credit report annually
+
+Traveling:
+- Notify bank before traveling
+- Use ATMs in secure locations only
+- Avoid currency exchange in unfamiliar areas
+- Keep card separate from wallet/ID
+- Avoid leaving card unattended
+
+PHISHING AND SCAMS:
+
+Be Suspicious Of:
+- Emails from "Visa" asking you to confirm account
+- Unexpected calls asking for card details
+- Texts claiming card is locked
+- Pop-ups asking for payment information
+- Offers that seem too good to be true
+
+What to Do:
+- DO NOT click links in suspicious emails
+- DO NOT provide card details via email/phone/text
+- Contact Visa or your bank directly instead
+- Hang up phone calls and call back official number
+- Forward phishing emails to your bank
+- Report scams to Federal Trade Commission (FTC)
+
+Remember: Legitimate companies never ask for card details via email, phone, or unsolicited messages.
+
+================================================================================
+ARTICLE 5: CARD FEATURES AND TECHNICAL ISSUES
+================================================================================
+Category: Card Features / Troubleshooting
+Company: Visa
+Difficulty: Beginner
+Escalation Required: Sometimes
+
+Content:
+VISA CARD TYPES:
+
+Credit Cards:
+- You borrow money from the card issuer
+- You pay back the amount monthly
+- Charged interest on unpaid balance
+- Build credit history
+- Best fraud protection
+
+Debit Cards:
+- Money is taken directly from your bank account
+- No interest charged
+- No credit building
+- Still protected by Visa's fraud prevention
+- Funds taken immediately
+
+Prepaid Cards:
+- You load money onto the card upfront
+- Spend until balance is depleted
+- No credit building
+- Higher fees typically
+- Good for budgeting or gifts
+
+Visa Gift Cards:
+- Pre-loaded with specific amount
+- Given as gift
+- Can be used anywhere Visa is accepted
+- Expires after certain date
+- No refunds once spent
+
+ATM/Debit Card Features:
+- Can withdraw cash from ATMs
+- Can make deposits (if issuer supports)
+- Can check balance at ATM
+- 24/7 availability
+
+FINDING AN ATM:
+
+Visa ATM Locator:
+1. Visit visa.com/atmlocator
+2. Enter your location or address
+3. Shows nearby ATMs
+4. Can filter by bank/network
+5. Over 2 million ATMs worldwide
+
+Using Visa ATMs:
+- Can withdraw cash at any Visa-enabled ATM
+- Check your bank for fee information
+- Different ATM networks may charge fees
+- Your bank may reimburse out-of-network fees
+- PIN required (usually 4 digits)
+
+ATM Cash Withdrawal Issues:
+
+"ATM Out of Service"
+- ATM temporarily down
+- Try different ATM
+- Contact your bank if you need cash urgently
+
+"Withdrawal Limit Exceeded"
+- Daily withdrawal limit reached
+- Limits vary by bank (typically $200-$500)
+- Contact bank to increase limit
+- Can withdraw next day
+
+"Incorrect PIN"
+- Wrong PIN entered
+- Most ATMs allow 3 attempts
+- After 3 failures, card blocked at that ATM for 24 hours
+- Try different ATM
+- Don't try repeatedly at same machine
+
+"ATM Ate Your Card"
+- Machine kept your card
+- Usually for security (too many failed PINs)
+- Card will be mailed back by the ATM operator
+- Contact your bank for replacement
+- Takes 5-7 business days to return
+
+TRAVELING WITH YOUR VISA CARD:
+
+Before You Travel:
+1. Notify your bank of travel dates and countries
+2. Ask about foreign transaction fees
+3. Ask about currency conversion rates
+4. Request emergency card shipping if needed
+5. Get list of ATMs in destination country
+6. Make note of 24/7 support number
+
+Informed Traveler Checklist:
+- [ ] Bank knows travel dates
+- [ ] Card not set to block international transactions
+- [ ] Backup payment method (different card)
+- [ ] Copies of important numbers (separate from card)
+- [ ] Contact info for your bank
+- [ ] Travel insurance (if applicable)
+- [ ] Mobile phone working internationally
+
+Traveling Safely:
+1. Use ATMs in secure, well-lit locations
+2. Prefer bank ATMs over standalone machines
+3. Cover keypad when entering PIN
+4. Don't accept help from strangers
+5. Keep card separate from wallet
+6. Avoid carrying large amounts of cash
+7. Use card in reputable establishments
+8. Report lost card immediately
+
+Currency and Exchange:
+- Visa operates in most currencies
+- Dynamic currency conversion at merchant level
+- Exchange rates vary by issuer and merchant
+- Check with your bank about rates
+- ATM withdrawals typically have better rates
+
+MERCHANT RESTRICTIONS:
+
+What Are Merchant Restrictions?
+
+Some merchants have rules about Visa acceptance:
+
+Minimum Amounts:
+- Some require minimum purchase (e.g., $5 minimum)
+- Legal in some countries with restrictions
+- Contact merchant if refused for being below minimum
+
+Maximum Amounts:
+- Some set maximum per transaction
+- Usually for security reasons
+- Contact merchant if need to split transaction
+
+Industry Restrictions:
+- Some merchants have special requirements
+- Gambling, adult sites may have additional verification
+- Some international merchants have restrictions
+- Government agencies may have specific rules
+
+Merchant Refusal:
+- Merchant must accept all Visa cards equally
+- Cannot refuse based on card type (debit vs credit)
+- Cannot refuse based on issuer
+- Can report discriminatory behavior to Visa
+
+If You Believe Merchant Refused Unjustly:
+1. Ask for manager
+2. Explain you have valid Visa card
+3. Request they process transaction
+4. Document merchant name, location, time
+5. If still refused, report to Visa via online form
+
+DAMAGED OR COMPROMISED CARDS:
+
+Damaged Card:
+- Unreadable magnetic stripe
+- Chip not working
+- Card warped or bent
+- Torn or physically damaged
+
+Solution:
+1. Contact your bank
+2. Request replacement card
+3. Bank will send new card (5-7 business days)
+4. Don't try to use damaged card (may fail)
+5. Destroy old card by cutting in half
+
+Compromised Card (Number Stolen):
+- Someone has your card number
+- Card itself wasn't physically lost
+- May not know how it was compromised
+- Security concern even if card in hand
+
+Solution:
+1. Contact bank immediately
+2. Report suspected fraud
+3. Request card replacement as precaution
+4. Request cardless/temporary card if available
+5. Monitor account carefully
+
+Lost During Travel:
+- In foreign country and lost card
+- Need emergency card
+- Cannot wait for regular mailing
+
+Solution:
+1. Call Visa or your bank's travel emergency line
+2. Request emergency card
+3. Card shipped to nearest issuer branch or hotel
+4. Usually arrives within 1-3 business days
+5. May require advance payment
+
+================================================================================
+ARTICLE 6: WHEN TO CONTACT VISA SUPPORT
+================================================================================
+Category: Support / Escalation
+Company: Visa
+Difficulty: Beginner
+Escalation Required: Yes (for actual support)
+
+Content:
+UNDERSTANDING VISA'S ROLE:
+
+Important Note:
+Visa does NOT manage your account - your bank/card issuer does.
+
+Visa operates the payment network. Your bank:
+- Issues the card
+- Manages your account
+- Handles disputes
+- Processes payments
+- Manages your balance
+- Handles fraud investigations
+- Controls limits and settings
+
+Therefore:
+- Contact your bank FIRST for account issues
+- Contact Visa for network-level issues
+- Only escalate to Visa if bank won't help
+
+WHEN TO CONTACT YOUR BANK (Not Visa):
+
+Account Issues (Contact Your Bank):
+- Can't log into online banking
+- Need to report lost/stolen card (though Visa can help too)
+- Card declined and need to understand why
+- Want to increase credit limit
+- Billing questions
+- Statement discrepancies
+- Transaction questions
+- Change account settings
+- Request replacement card
+
+Fraudulent Charges (Contact Your Bank):
+- Unauthorized transactions on your account
+- Dispute/chargeback process
+- Fraud investigation
+- Provisional credit
+
+Card-Specific Issues (Contact Your Bank):
+- PIN problems
+- Card activation
+- Card replacement
+- Card features
+- Account limits
+
+WHEN TO CONTACT VISA:
+
+Network-Level Issues (Contact Visa):
+- Visa network appears to be down
+- 3D Secure authentication not working
+- Card accepted by merchant but later declined
+- Merchant claiming card was invalid when it wasn't
+- Visa network fraud detection incorrectly blocking legitimate transactions
+- Merchant disputing your chargeback unfairly
+- Security issue with Visa network
+- Reporting merchant for discriminatory practices
+- Reporting suspicious communication claiming to be from Visa
+- General questions about Visa products
+
+Escalation From Bank (Contact Visa):
+- Your bank refused to investigate your dispute
+- Your bank not honoring Zero Liability protection
+- Your bank refusing to address fraud
+- Bank mistreated you during dispute process
+- Feel Visa needs to directly intervene
+
+HOW TO CONTACT VISA:
+
+Online:
+1. Visit visa.co.in/support.html (India)
+2. Or usa.visa.com/support.html (USA)
+3. Click "Contact Us" or "Submit a Request"
+4. Choose your country/region
+5. Select your issue type
+6. Fill out form with details
+7. Submit for investigation
+
+By Phone:
+For Lost/Stolen Cards:
+- India: 000-800-100-1219 (toll-free)
+- USA: 1-800-847-2911 (toll-free)
+- Other countries: Check visa.com website for your country's number
+
+For General Support:
+- International: +1-303-967-1096 (reverse charge accepted)
+- Check your statement or visa.com for direct numbers
+
+By Mail:
+- Address varies by country
+- Check visa.com/contact for mailing address
+- Include card number, name, details of issue
+- Slower than phone/online (days vs hours)
+
+INFORMATION TO HAVE READY:
+
+When Contacting Visa:
+- Your full card number
+- Card expiration date
+- Your name
+- Your account number (if available)
+- Cardholder address
+- Date of issue/incident
+- Merchant name (if applicable)
+- Transaction amount and date
+- Detailed description of problem
+- What you've already tried to resolve it
+- Your preferred contact method (phone/email)
+
+Response Times:
+
+Urgent (Lost/Stolen Card):
+- Answer: Immediate
+- Card blocked: Within minutes
+- Replacement arranged: 1-3 business days
+
+High Priority (Fraud/Dispute):
+- Initial response: 24-48 hours
+- Investigation starts: Within 1 week
+- Resolution: 30-60 days
+
+Standard Issues:
+- Response: 2-5 business days
+- Investigation: 5-15 business days
+- Resolution varies by issue
+
+ESCALATION DECISION TREE:
+
+1. Account Issue?
+   → Contact Your Bank First
+   → If bank won't help → Escalate to Visa
+
+2. Card Lost/Stolen?
+   → Contact Your Bank AND/OR Visa
+   → Visa can block card and arrange emergency replacement
+   → Bank manages account and disputed charges
+
+3. Fraudulent Transaction?
+   → Contact Your Bank
+   → Bank investigates and processes dispute
+   → Bank works with Visa if needed
+   → Escalate to Visa only if bank's investigation is unfair
+
+4. Card Declined?
+   → Contact Your Bank
+   → Bank explains decline reason
+   → Visa involved only if it's a network issue
+
+5. Dispute Won't Process?
+   → Contact Your Bank
+   → Ask about their dispute process
+   → Escalate to Visa if bank refuses to process
+
+6. Merchant Issue?
+   → Contact Visa directly
+   → Report merchant practicing fraud or discrimination
+   → Visa can investigate and take action
+
+7. 3D Secure/Security Issue?
+   → Contact Your Bank First
+   → Escalate to Visa if bank can't help
+
+If unsure who to contact → Start with your bank. Your bank can escalate to Visa if needed.
+
+DOCUMENTATION FOR ESCALATION:
+
+Before Contacting Visa, Have:
+- [ ] Card number
+- [ ] Detailed explanation of issue
+- [ ] Date/time of incident
+- [ ] Merchant information (if applicable)
+- [ ] Transaction details
+- [ ] Evidence supporting your claim
+- [ ] Proof you contacted your bank
+- [ ] Proof of what bank said/did
+- [ ] Communication records
+- [ ] Reference numbers from any interactions
+
+Complete documentation makes stronger case for Visa intervention.
+
+================================================================================
+END OF VISA SUPPORT KNOWLEDGE BASE
+================================================================================
