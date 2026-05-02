@@ -1,74 +1,78 @@
 import pandas as pd
 import os
 import sys
-# Import the RAG logic from your triage_engine
-from triage_engine import process_issue
+
+# Import your RAG engine
+try:
+    from triage_engine import process_issue
+except ImportError:
+    # If the import fails, we try to add the current directory to path
+    sys.path.append(os.path.dirname(os.path.abspath(__file__)))
+    from triage_engine import process_issue
 
 def run_batch_triage():
-    # --- AUTOMATIC PATH LOCATOR ---
-    # This finds the 'support_tickets' folder relative to where this script lives
-    base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-    input_path = os.path.join(base_dir, 'support_tickets', 'support_tickets.csv')
-    output_path = os.path.join(base_dir, 'support_tickets', 'output.csv')
-
-    print("--- 🚀 Sentinel Batch Triage Engine ---")
+    # --- BULLETPROOF PATH LOGIC ---
+    # 1. Get the absolute path of THIS script (batch_processor.py)
+    script_dir = os.path.dirname(os.path.abspath(__file__))
     
-    # Safety check: Does the file actually exist?
-    if not os.path.exists(input_path):
-        print(f"❌ Error: CSV not found at {input_path}")
-        print("Please ensure support_tickets.csv is inside the support_tickets folder.")
-        return
+    # 2. Go up one level to the main project folder
+    project_root = os.path.dirname(script_dir)
+    
+    # 3. Look for the CSV in the support_tickets folder at the root
+    input_path = os.path.join(project_root, 'support_tickets', 'support_tickets.csv')
+    output_path = os.path.join(project_root, 'support_tickets', 'output.csv')
 
-    print(f"📂 Loading: {input_path}")
-    try:
-        df = pd.read_csv(input_path)
-    except Exception as e:
-        print(f"❌ Failed to read CSV: {e}")
-        return
+    print(f"--- 🚀 AI Batch Processor Started ---")
+    print(f"🔍 Searching for CSV at: {input_path}")
+
+    if not os.path.exists(input_path):
+        # EMERGENCY FALLBACK: If root search fails, look in the same folder as script
+        input_path = os.path.join(script_dir, 'support_tickets.csv')
+        output_path = os.path.join(script_dir, 'output.csv')
+        
+        if not os.path.exists(input_path):
+            print("❌ CRITICAL ERROR: support_tickets.csv not found anywhere!")
+            print(f"Please move your CSV to: {os.path.join(project_root, 'support_tickets/')}")
+            return
+
+    print(f"✅ Found file! Reading data...")
+    df = pd.read_csv(input_path)
 
     results = []
-    total_tickets = len(df)
-    print(f"🤖 Processing {total_tickets} tickets using Llama 3.2 RAG...")
+    print(f"🤖 Processing {len(df)} tickets...")
 
     for index, row in df.iterrows():
-        # Clean up data from the CSV
         issue_text = str(row.get('Issue', ''))
         company_name = str(row.get('Company', 'General'))
         
-        print(f"[{index+1}/{total_tickets}] Analyzing: {company_name} issue...")
+        print(f"[{index+1}/{len(df)}] Analyzing {company_name}...")
         
-        # Call the RAG engine
+        # Get AI Response
         try:
-            raw_response = process_issue(issue_text, company_name)
-        except Exception as e:
-            print(f"   ⚠️ RAG Error: {e}")
-            raw_response = "System error during processing. Escalated to human."
+            response_text = process_issue(issue_text, company_name)
+        except:
+            response_text = "Technical error. Manual triage required."
 
-        # Logic for Status & Request Type
+        # Triage Logic
         status = "replied"
-        request_type = "product_issue"
+        req_type = "product_issue"
         
-        # Hard-coded Escalation Logic (The "Human" touch)
-        urgent_triggers = ['payment', 'refund', 'hack', 'security', 'password', 'money', 'visa']
-        if any(word in issue_text.lower() for word in urgent_triggers):
+        urgent = ['payment', 'refund', 'hack', 'security', 'money', 'visa']
+        if any(word in issue_text.lower() for word in urgent):
             status = "escalated"
-            request_type = "bug" 
+            req_type = "bug"
 
-        # Build the final output row
         results.append({
             "status": status,
             "product_area": "Technical Support",
-            "response": raw_response,
-            "justification": f"Processed via {company_name} knowledge base.",
-            "request_type": request_type
+            "response": response_text,
+            "justification": f"Automated RAG response for {company_name}.",
+            "request_type": req_type
         })
 
-    # Save to the output file
-    output_df = pd.DataFrame(results)
-    output_df.to_csv(output_path, index=False)
-    
-    print(f"\n✅ DONE! All {total_tickets} tickets triaged.")
-    print(f"📄 Final Results saved to: {output_path}")
+    # Save results
+    pd.DataFrame(results).to_csv(output_path, index=False)
+    print(f"\n✨ DONE! Results saved to: {output_path}")
 
 if __name__ == "__main__":
     run_batch_triage()
