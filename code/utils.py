@@ -2,23 +2,53 @@ import os
 import glob
 
 def get_support_context(company):
-    """Retrieves relevant text from the data/ subfolders based on company name."""
-    # Convert company to string to handle 'NaN' or float values
-    safe_company = str(company).strip()
+    """
+    Retrieves internal documentation for a specific company to provide
+    context for the RAG engine.
+    """
+    # 1. Clean up the input - humans sometimes pass messy data!
+    target = str(company).strip().lower()
     
-    # If the company is empty or 'None', we skip the knowledge search
-    if not safe_company or safe_company.lower() in ['nan', 'none']:
-        return ""
+    if not target or target in ['nan', 'none', 'unknown']:
+        return "No specific company context available."
 
-    context = ""
-    # Path relative to support_tickets/ folder
-    path = os.path.join("..", "data", safe_company.lower(), "*.txt")
-    files = glob.glob(path)
+    # 2. DYNAMIC PATHING
+    # This finds the 'data' folder relative to this script's location
+    # so it works on any computer.
+    current_dir = os.path.dirname(os.path.abspath(__file__))
+    project_root = os.path.dirname(current_dir)
+    data_folder = os.path.join(project_root, 'data', target)
+
+    context_parts = []
     
-    for f_path in files:
-        try:
-            with open(f_path, 'r', encoding='utf-8') as f:
-                context += f"SOURCE: {os.path.basename(f_path)}\n{f.read()[:1500]}\n---\n"
-        except Exception:
-            continue
-    return context
+    # 3. SEARCHING THE KNOWLEDGE BASE
+    if os.path.exists(data_folder):
+        # We look for all text files in the company's subfolder
+        search_pattern = os.path.join(data_folder, "*.txt")
+        kb_files = glob.glob(search_pattern)
+
+        for file_path in kb_files:
+            try:
+                with open(file_path, 'r', encoding='utf-8') as f:
+                    content = f.read().strip()
+                    # We only take a snippet to avoid hitting token limits
+                    snippet = content[:2000] 
+                    filename = os.path.basename(file_path)
+                    context_parts.append(f"REFERENCE [{filename}]:\n{snippet}")
+            except Exception as e:
+                print(f"   ⚠️ Skipping file {file_path}: {e}")
+                continue
+    else:
+        print(f"   ⚠️ Warning: No data folder found for '{target}' at {data_folder}")
+
+    # Join all found documents with a clear separator
+    if not context_parts:
+        return "Generic Support Mode: No local knowledge base found."
+        
+    return "\n\n---\n\n".join(context_parts)
+
+if __name__ == "__main__":
+    # Quick debug test for the developer
+    print("Testing Utils...")
+    test_context = get_support_context("Visa")
+    print(f"Context Length: {len(test_context)} chars")
