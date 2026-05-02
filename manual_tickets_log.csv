@@ -1,0 +1,40 @@
+timestamp,company,issue,status,product_area,request_type,response
+2026-05-02 05:41:31,HackerRank,tried to pay for my test but the hacker platform said my card was declined by the bank,replied,General Support,product_issue,I've analyzed your request regarding General Support. We are looking into this for HackerRank.
+2026-05-02 05:47:33,Visa,I am want to travel to america what will be visa proccess? and how long deos it take?,escalated,Billing,I've analyzed your request regarding Billing. We are looking into this for Visa.
+2026-05-02 05:49:03,HackerRank,python3 main.py,replied,General Support,I've analyzed your request regarding General Support. We are looking into this for HackerRank.
+2026-05-02 05:49:30,Visa,I've analyzed your request regarding Billing. We are looking into this for Visa.,escalated,Billing/Payments,Our customer support will reach out shortly regarding your payment concern.
+2026-05-02 05:49:49,Visa,I am want to travel to america what will be visa process? and how long deos it take?,escalated,Billing,I've analyzed your request regarding Billing. We are looking into this for Visa.
+2026-05-02 05:56:15,Unknown,python3 main.py,replied,General Support,I've analyzed your request regarding General Support. We are looking into this for Unknown.
+2026-05-02 05:56:49,Claude,how could i get an API key from claude?,replied,General Support,I've analyzed your request regarding General Support. We are looking into this for Claude.
+2026-05-02 06:44:13,Claude,how could i get an API key from claude?,replied,"To obtain an API key from Claude, I recommend the following steps:
+
+1. Log in to your Claude account and navigate to the ""Settings"" or ""Account"" section.
+2. Look for the ""API Keys"" or ""Developer Settings"" option and click on it.
+3. You will see a list of available API keys, including a ""Generate New API Key"" or ""Create API Key"" button.
+4. Click on the ""Generate New API Key"" or ""Create API Key"" button to create a new API key.
+5. Follow the prompts to generate and download your new API key.
+
+If you're unable to find these options in your account settings, please let me know and I'll be happy to assist you further."
+2026-05-02 06:45:04,HackerRank,I am unable to login into my accpunt it was showing invalid credentials,replied,"I'm happy to help you with logging back into your HackerRank account. 
+
+Firstly, let's try a few troubleshooting steps:
+
+1. Double-check that you're entering the correct username and password.
+2. Ensure that you're using the correct capitalization for both the username and password.
+
+If you've checked these and are still having trouble, I recommend trying to reset your password. Here's how:
+
+1. Go to the HackerRank login page ([www.hackerrank.com](http://www.hackerrank.com)).
+2. Click on ""Forgot Password"" at the bottom of the login form.
+3. Enter your username and click ""Reset Password"".
+4. Follow the instructions to reset your password.
+
+If you're still having"
+2026-05-02 06:45:52,Claude,i have done payment but i am unable to access the pro version?,escalated,Our customer support will reach out shortly regarding your payment concern.
+2026-05-02 06:47:41,Visa,"i am in US Virgin Islands and the merchant is saying i have to spend minimum 10$ on my VISA card, why so?",replied,"In the US Virgin Islands, Visa has a specific rule that requires merchants to verify the cardholder's identity before processing a transaction. This is done to prevent credit card fraud.
+
+The $10 minimum purchase requirement is in place to ensure that the merchant can reasonably verify the cardholder's identity and confirm that they are not attempting to use a stolen or counterfeit card.
+
+This rule applies to all Visa transactions, including online purchases, phone orders, and in-person transactions. The merchant may ask you to provide identification or proof of address to complete the transaction.
+
+If you're unsure about this policy, I recommend contacting your bank's customer service or Visa's customer support directly for more information."
