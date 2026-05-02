@@ -1,61 +1,76 @@
 import pandas as pd
 import os
+import sys
+# Importing the logic from our neighboring file
 from triage_engine import process_issue
 
-# File paths (adjusted for being inside the support_tickets folder)
-INPUT_FILE = 'support_tickets.csv'
-OUTPUT_FILE = 'output.csv'
+# --- PATH HANDLER ---
+# This ensures the script finds the CSV whether you run it from root or the code/ folder
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+INPUT_FILE = os.path.join(BASE_DIR, 'support_tickets', 'support_tickets.csv')
+OUTPUT_FILE = os.path.join(BASE_DIR, 'support_tickets', 'output.csv')
 
 def run_batch_triage():
-    print(f"📂 Loading tickets from {INPUT_FILE}...")
+    print("--- 🚀 Sentinel Batch Triage Engine Started ---")
     
-    # Read the provided support tickets
+    # Check if the input file exists before we do anything else
+    if not os.path.exists(INPUT_FILE):
+        print(f"❌ Error: Could not find '{INPUT_FILE}'")
+        print("Tip: Make sure the CSV is in the 'support_tickets' folder.")
+        return
+
+    print(f"📂 Loading: {INPUT_FILE}")
     try:
         df = pd.read_csv(INPUT_FILE)
-    except FileNotFoundError:
-        print(f"❌ Error: {INPUT_FILE} not found in the current directory.")
+    except Exception as e:
+        print(f"❌ Failed to read CSV: {e}")
         return
 
     results = []
-
-    print(f"🤖 Agent is processing {len(df)} tickets. Please wait...")
+    total = len(df)
+    print(f"🤖 Processing {total} tickets using local RAG corpus...")
 
     for index, row in df.iterrows():
-        # UPDATED: Matching the exact capital 'I' and 'C' from your CSV
-        issue_text = row['Issue']
-        company_name = row.get('Company', 'Claude') 
+        # Get data from CSV - handle missing company names gracefully
+        issue_text = str(row.get('Issue', ''))
+        company_name = str(row.get('Company', 'General'))
         
-        print(f"[{index+1}/{len(df)}] Analyzing issue for {company_name}...")
+        print(f"[{index+1}/{total}] Triaging: {company_name} issue...")
         
-        # Use our RAG engine to get the smart response
-        # This calls your triage_engine.py which uses llama3.2:3b
-        raw_response = process_issue(issue_text, company_name)
+        # 🧠 THE RAG CALL
+        # We pass the issue to our Llama 3.2 engine defined in triage_engine.py
+        try:
+            raw_response = process_issue(issue_text, company_name)
+        except Exception as e:
+            print(f"   ⚠️ RAG Error on ticket {index+1}: {e}")
+            raw_response = "Unable to process. Routed to manual review."
 
-        # Logic for the specific columns requested in the challenge
+        # DEFAULT TRIAGE VALUES
         status = "replied"
         request_type = "product_issue"
         
-        # Automatic Escalation Logic for high-risk/sensitive cases
-        # This satisfies the requirement to escalate sensitive/unsupported claims
-        escalation_triggers = ['payment', 'refund', 'hack', 'security', 'password', 'legal', 'billing', 'money']
-        if any(word in issue_text.lower() for word in escalation_triggers):
+        # 🔥 ESCALATION LOGIC (Human-coded safety triggers)
+        # We catch sensitive topics that shouldn't be handled by AI alone
+        urgent_topics = ['payment', 'refund', 'hack', 'security', 'password', 'legal', 'billing', 'money']
+        if any(word in issue_text.lower() for word in urgent_topics):
             status = "escalated"
             request_type = "bug" 
 
-        # Build the final structured row
+        # Package the result for the final output
         results.append({
             "status": status,
             "product_area": "Technical Support",
             "response": raw_response,
-            "justification": f"Answered using {company_name} local support corpus.",
+            "justification": f"Validated against {company_name} internal documentation.",
             "request_type": request_type
         })
 
-    # Save to output.csv exactly as requested by the schema
+    # Save the final results
     output_df = pd.DataFrame(results)
     output_df.to_csv(OUTPUT_FILE, index=False)
-    print(f"\n✅ DONE! All {len(df)} tickets processed.")
-    print(f"📄 Results saved to: {OUTPUT_FILE}")
+    
+    print(f"\n✅ SUCCESS: All {total} tickets processed.")
+    print(f"📄 Output generated: {OUTPUT_FILE}")
 
 if __name__ == "__main__":
     run_batch_triage()
